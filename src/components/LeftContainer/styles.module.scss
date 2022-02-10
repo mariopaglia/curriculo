@@ -1,0 +1,52 @@
+.leftContainer {
+	display: flex;
+	flex-direction: column;
+	color: var(--text);
+	background: var(--background-left);
+	-webkit-print-color-adjust: exact;
+	width: 30%;
+	min-width: 30vh;
+	padding: 2rem;
+
+	li {
+		& + li {
+			margin-top: 15px;
+		}
+
+		p {
+			font-weight: bold;
+			font-size: 0.75rem;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		order: 2;
+	}
+}
+
+.contact {
+	p {
+		display: flex;
+		align-items: center;
+	}
+
+	svg {
+		color: var(--blue-500);
+		margin-right: 7px;
+	}
+}
+
+.skills {
+	div {
+		margin: 0 10px 10px 0;
+		padding: 10px;
+		color: var(--blue-500);
+
+		svg {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+		}
+	}
+}

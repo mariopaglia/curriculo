@@ -1,0 +1,43 @@
+.rightContainer {
+	display: flex;
+	flex-direction: column;
+	color: var(--blue-800);
+	background: var(--background-right);
+	width: 70%;
+	padding: 2rem;
+
+	h1 {
+		color: var(--blue-500);
+	}
+
+	h1:first-child {
+		font-size: 2rem;
+	}
+
+	@media screen and (max-width: 768px) {
+		order: 1;
+		width: 100%;
+	}
+}
+
+.currentJob {
+	font-weight: bold;
+	color: var(--gray-600);
+}
+
+.resume {
+	text-align: justify;
+}
+
+.experience {
+	h3 {
+		color: var(--gray-600);
+	}
+
+	margin-bottom: 20px;
+
+	.job {
+		font-style: italic;
+		color: var(--blue-500);
+	}
+}
