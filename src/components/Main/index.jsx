@@ -178,7 +178,6 @@ export function Main() {
 						<p>São Paulo, São Paulo, Brasil</p>
 					</div>
 					<br />
-
 					<h1>Formação acadêmica</h1>
 					<br />
 					<div className={styled.experience}>
