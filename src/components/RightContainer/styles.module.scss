@@ -26,18 +26,36 @@
 }
 
 .resume {
+	max-width: 900px;
+	font-size: 0.9rem;
 	text-align: justify;
 }
 
 .experience {
+	margin-bottom: 20px;
+
 	h3 {
 		color: var(--gray-600);
 	}
 
-	margin-bottom: 20px;
-
 	.job {
-		font-style: italic;
 		color: var(--blue-500);
+	}
+
+	.time,
+	.location {
+		font-size: 0.8rem;
+	}
+
+	.location {
+		color: var(--gray-600);
+		font-style: italic;
+	}
+
+	.jobDescription {
+		margin-top: 0.9rem;
+		max-width: 900px;
+		font-size: 0.9rem;
+		text-align: justify;
 	}
 }

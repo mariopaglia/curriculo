@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from './styles.module.scss';
 
-import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaBehanceSquare } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaBehanceSquare, FaHandshake, FaPhoneAlt } from 'react-icons/fa';
 import { Chip } from '@mui/material';
 import { DiHtml5, DiCss3, DiJavascript, DiReact, DiSass, DiGitBranch, DiJqueryLogo, DiBootstrap, DiPhp, DiMysql } from 'react-icons/di';
 import { SiTypescript, SiNextdotjs } from 'react-icons/si';
@@ -14,7 +14,13 @@ export function LeftContainer() {
 
 			<div className={styled.contact}>
 				<p>
-					<FaMapMarkerAlt /> Jundiaí/SP
+					<FaMapMarkerAlt /> Jundiaí, São Paulo, Brasil
+				</p>
+				<p>
+					<FaPhoneAlt />{' '}
+					<a href="https://wa.me/5511948413923" target="_blank" rel="noreferrer">
+						(11) 94841-3923
+					</a>
 				</p>
 				<p>
 					<FaEnvelope />{' '}
@@ -44,7 +50,7 @@ export function LeftContainer() {
 
 			<br />
 
-			<h3>Principais competências</h3>
+			<h3>Competências técnicas</h3>
 			<br />
 			<div className={styled.skills}>
 				<Chip icon={<DiHtml5 />} color="primary" size="medium" label="HTML" variant="outlined" />
@@ -59,6 +65,21 @@ export function LeftContainer() {
 				<Chip icon={<DiBootstrap />} color="primary" label="Bootstrap" variant="outlined" />
 				<Chip icon={<DiPhp />} color="primary" label="PHP" variant="outlined" />
 				<Chip icon={<DiMysql />} color="primary" label="MYSQL" variant="outlined" />
+			</div>
+			<br />
+
+			<h3>Competências interpessoais</h3>
+			<br />
+			<div className={styled.skills}>
+				<Chip icon={<FaHandshake />} color="primary" size="medium" label="Comunicação" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Escrita" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Empatia" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Colaboração" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Organização" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Flexibilidade" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Resiliência" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Liderança" variant="outlined" />
+				<Chip icon={<FaHandshake />} color="primary" label="Ética" variant="outlined" />
 			</div>
 			<br />
 
