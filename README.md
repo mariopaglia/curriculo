@@ -2,7 +2,7 @@
 
 Currículo pessoal desenvolvido em ReactJS.
 
-[Clique aqui](https://mariopaglia.vercel.app/) para visualizar o curriculo online.
+[Clique aqui](https://mariopaglia.dev.br/) para visualizar o curriculo online.
 
 O currículo está totalmente responsivo e pronto para você salvar como PDF caso precise.
 
