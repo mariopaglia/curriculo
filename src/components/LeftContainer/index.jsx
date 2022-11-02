@@ -4,7 +4,7 @@ import styled from './styles.module.scss';
 import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaBehanceSquare, FaHandshake, FaPhoneAlt } from 'react-icons/fa';
 import { Chip } from '@mui/material';
 import { DiHtml5, DiCss3, DiJavascript, DiReact, DiSass, DiGitBranch, DiJqueryLogo, DiBootstrap, DiPhp, DiMysql } from 'react-icons/di';
-import { SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { SiTypescript, SiNextdotjs, SiJest, SiCypress, SiTestinglibrary, SiAmazonaws, SiTerraform } from 'react-icons/si';
 
 export function LeftContainer() {
     return (
@@ -65,6 +65,11 @@ export function LeftContainer() {
 				<Chip icon={<DiBootstrap />} color="primary" label="Bootstrap" variant="outlined" />
 				<Chip icon={<DiPhp />} color="primary" label="PHP" variant="outlined" />
 				<Chip icon={<DiMysql />} color="primary" label="MYSQL" variant="outlined" />
+				<Chip icon={<SiJest />} color="primary" label="Jest" variant="outlined" />
+				<Chip icon={<SiCypress />} color="primary" label="Cypress" variant="outlined" />
+				<Chip icon={<SiTestinglibrary />} color="primary" label="Testing Library" variant="outlined" />
+				<Chip icon={<SiAmazonaws />} color="primary" label="AWS" variant="outlined" />
+				<Chip icon={<SiTerraform />} color="primary" label="Terraform" variant="outlined" />
 			</div>
 			<br />
 

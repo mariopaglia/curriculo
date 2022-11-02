@@ -2,23 +2,15 @@
 
 Currículo pessoal desenvolvido em ReactJS.
 
-[Clique aqui](https://mariopaglia.dev.br/) para visualizar o curriculo online.
+Versão online: [https://mariopaglia.dev.br/](https://mariopaglia.dev.br/)
 
 O currículo está totalmente responsivo e pronto para você salvar como PDF caso precise.
 
 ## Deseja utilizar como modelo para seu currículo?
 
-Fique à vontade, basta realizar um Fork do repositório e iniciar em seu computador com `npm start`
+Fique à vontade, basta realizar um Fork do repositório e iniciar em seu computador com `npm start` ou `yarn start`
 
 Se gostou do projeto, não esqueça de marcar o repositório com uma estrela.
-
-## Screenshot - Modelo online
-
-![Modelo online](https://i.imgur.com/falBUZV.png)
-
-## Screenshot - Modelo PDF
-
-![Modelo PDF](https://i.imgur.com/Fs8Vlot.png)
 
 ## Autor/Contatos
 

@@ -8,7 +8,7 @@ export function RightContainer() {
 	const experiencePeriod = (primaryDate, secondaryDate) => {
 		return formatDistance(new Date(primaryDate), secondaryDate ? new Date(secondaryDate) : new Date(), { locale: ptBR })
 	};
-	
+
 	return (
 		<section className={styled.rightContainer}>
 			<h1>Mario Paglia</h1>
@@ -34,7 +34,7 @@ export function RightContainer() {
 				<p className={styled.job}>Desenvolvedor Front-end Pleno</p>
 				<p className={styled.time}>mar de 2022 - o momento • {experiencePeriod('03/07/2022', '')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Desenvolvedor front-end responsável por todos os sistemas internos e externos da Consorciei para gestão de compras, vendas e tranferências de cotas de consórcio. Atuando com tecnologias como: ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Backend for Frontend (BFF) etc</p>
+				<p className={styled.jobDescription}>Desenvolvedor front-end responsável por todos os sistemas internos e externos da Consorciei para gestão de compras, vendas e tranferências de cotas de consórcio. Atuando com tecnologias como: ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress, Testing Library etc</p>
 			</div>
 
 			<div className={styled.experience}>
@@ -42,7 +42,7 @@ export function RightContainer() {
 				<p className={styled.job}>Desenvolvedor Front-end</p>
 				<p className={styled.time}>set de 2016 - mar de 2022 • {experiencePeriod('09/01/2016', '01/03/2022')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Atuo como desenvolvedor front-end criando e realizando manutenções em sites, lojas virtuais, blogs, landing pages, dashboards etc. De acordo com o projeto utilizo tecnologias como: HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, consumo de API, ReactJS, NextJS, TypeScript, Redux, Styled Components e Axios.</p>
+				<p className={styled.jobDescription}>Atuei como desenvolvedor front-end criando e realizando manutenções em sites, lojas virtuais, blogs, landing pages, dashboards etc. De acordo com o projeto utilizo tecnologias como: HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, consumo de API, ReactJS, NextJS, TypeScript, Redux, Styled Components e Axios.</p>
 			</div>
 
 			<div className={styled.experience}>
@@ -53,7 +53,7 @@ export function RightContainer() {
 				<p className={styled.jobDescription}>Atuei diretamente com infraestrutura de redes, servidores dedicados, cloud computing, virtualização, gerenciamento de servidores Linux, hospedagem de sites, registro de domínios, além de atendimento e suporte aos clientes da empresa.</p>
 			</div>
 
-			<div className={styled.experience} style={{marginBottom: 0}}>
+			<div className={styled.experience} style={{ marginBottom: 0 }}>
 				<h3>SKY Brasil</h3>
 				<p className={styled.time}>8 anos 8 meses</p>
 
