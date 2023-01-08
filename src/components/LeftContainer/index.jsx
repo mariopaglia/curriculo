@@ -7,7 +7,58 @@ import { DiHtml5, DiCss3, DiJavascript, DiReact, DiSass, DiGitBranch, DiJqueryLo
 import { SiTypescript, SiNextdotjs, SiJest, SiCypress, SiTestinglibrary, SiAmazonaws, SiTerraform } from 'react-icons/si';
 
 export function LeftContainer() {
-    return (
+	const technicalSkillsList = [
+		{ label: 'HTML', icon: <DiHtml5 /> },
+		{ label: 'CSS', icon: <DiCss3 /> },
+		{ label: 'JavaScript', icon: <DiJavascript /> },
+		{ label: 'ReactJS', icon: <DiReact /> },
+		{ label: 'NextJS', icon: <SiNextdotjs /> },
+		{ label: 'TypeScript', icon: <SiTypescript /> },
+		{ label: 'SASS', icon: <DiSass /> },
+		{ label: 'Git/GitHub', icon: <DiGitBranch /> },
+		{ label: 'jQuery', icon: <DiJqueryLogo /> },
+		{ label: 'Bootstrap', icon: <DiBootstrap /> },
+		{ label: 'PHP', icon: <DiPhp /> },
+		{ label: 'MySQL', icon: <DiMysql /> },
+		{ label: 'Jest', icon: <SiJest /> },
+		{ label: 'Cypress', icon: <SiCypress /> },
+		{ label: 'Testing Library', icon: <SiTestinglibrary /> },
+		{ label: 'AWS', icon: <SiAmazonaws /> },
+		{ label: 'Terraform', icon: <SiTerraform /> },
+	]
+
+	const interpersonalSkillsList = [
+		'Comunicação',
+		'Escrita',
+		'Empatia',
+		'Colaboração',
+		'Organização',
+		'Flexibilidade',
+		'Resiliência',
+		'Liderança',
+		'Ética',
+		'Proatividade',
+	];
+
+	const certificationsList = [
+		{ course: 'HTML, CSS e Javascript', institution: 'Impacta' },
+		{ course: 'React Completo', institution: 'Origamid' },
+		{ course: 'ReactJS', institution: 'Rocketseat' },
+		{ course: 'NextJS', institution: 'Rocketseat' },
+		{ course: 'JavaScript', institution: 'Origamid' },
+		{ course: 'SASS', institution: 'Rocketseat' },
+		{ course: 'JamStack', institution: 'Rocketseat' },
+		{ course: 'Git e Github', institution: 'Udemy' },
+		{ course: 'Bootstrap', institution: 'Udemy' },
+		{ course: 'jQuery', institution: 'Udemy' },
+		{ course: 'Desenvolvimento Web', institution: 'Udemy' },
+		{ course: 'PHP', institution: 'Udemy' },
+		{ course: 'MYSQL', institution: 'Udemy' },
+		{ course: 'Liderança e Gestão de Pessoas', institution: 'SKY Brasil' },
+		{ course: 'Google Adwords', institution: 'Goobec' },
+	];
+
+	return (
 		<section className={styled.leftContainer}>
 			<h3>Contato</h3>
 			<br />
@@ -53,106 +104,42 @@ export function LeftContainer() {
 			<h3>Competências técnicas</h3>
 			<br />
 			<div className={styled.skills}>
-				<Chip icon={<DiHtml5 />} color="primary" size="medium" label="HTML" variant="outlined" />
-				<Chip icon={<DiCss3 />} color="primary" label="CSS" variant="outlined" />
-				<Chip icon={<DiJavascript />} color="primary" label="JavaScript" variant="outlined" />
-				<Chip icon={<DiReact />} color="primary" label="ReactJS" variant="outlined" />
-				<Chip icon={<SiNextdotjs />} color="primary" label="NextJS" variant="outlined" />
-				<Chip icon={<SiTypescript />} color="primary" label="TypeScript" variant="outlined" />
-				<Chip icon={<DiSass />} color="primary" label="SASS" variant="outlined" />
-				<Chip icon={<DiGitBranch />} color="primary" label="Git/GitHub" variant="outlined" />
-				<Chip icon={<DiJqueryLogo />} color="primary" label="jQuery" variant="outlined" />
-				<Chip icon={<DiBootstrap />} color="primary" label="Bootstrap" variant="outlined" />
-				<Chip icon={<DiPhp />} color="primary" label="PHP" variant="outlined" />
-				<Chip icon={<DiMysql />} color="primary" label="MYSQL" variant="outlined" />
-				<Chip icon={<SiJest />} color="primary" label="Jest" variant="outlined" />
-				<Chip icon={<SiCypress />} color="primary" label="Cypress" variant="outlined" />
-				<Chip icon={<SiTestinglibrary />} color="primary" label="Testing Library" variant="outlined" />
-				<Chip icon={<SiAmazonaws />} color="primary" label="AWS" variant="outlined" />
-				<Chip icon={<SiTerraform />} color="primary" label="Terraform" variant="outlined" />
+				{
+					technicalSkillsList.map((skill, index) => (
+						<Chip key={index} icon={skill.icon} color="primary" label={skill.label} variant="outlined" />
+					))
+				}
 			</div>
 			<br />
 
 			<h3>Competências interpessoais</h3>
 			<br />
 			<div className={styled.skills}>
-				<Chip icon={<FaHandshake />} color="primary" size="medium" label="Comunicação" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Escrita" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Empatia" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Colaboração" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Organização" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Flexibilidade" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Resiliência" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Liderança" variant="outlined" />
-				<Chip icon={<FaHandshake />} color="primary" label="Ética" variant="outlined" />
+				{
+					interpersonalSkillsList.map((skill, index) => (
+						<Chip key={index} icon={<FaHandshake />} color="primary" label={skill} variant="outlined" />
+					))
+				}
 			</div>
 			<br />
 
 			<h3>Certificações</h3>
 			<br />
 
-			<ul>
-				<li>
-					<span>HTML, CSS e Javascript</span>
-					<p>Impacta</p>
-				</li>
-				<li>
-					<span>React Completo</span>
-					<p>Origamid</p>
-				</li>
-				<li>
-					<span>ReactJS</span>
-					<p>Rocketseat</p>
-				</li>
-				<li>
-					<span>NextJS</span>
-					<p>Rocketseat</p>
-				</li>
-				<li>
-					<span>JavaScript</span>
-					<p>Origamid</p>
-				</li>
-				<li>
-					<span>SASS</span>
-					<p>Rocketseat</p>
-				</li>
-				<li>
-					<span>JamStack</span>
-					<p>Rocketseat</p>
-				</li>
-				<li>
-					<span>Git e Github</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>Bootstrap</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>jQuery</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>Desenvolvimento Web</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>PHP</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>MYSQL</span>
-					<p>Udemy</p>
-				</li>
-				<li>
-					<span>Liderança e Gestão de Pessoas</span>
-					<p>SKY Brasil</p>
-				</li>
-				<li>
-					<span>Google Adwords</span>
-					<p>Goobec</p>
-				</li>
-			</ul>
+			{
+				<>
+					<ul>
+						{
+							certificationsList.map((certification, index) => (
+								<li key={index}>
+									<span>{certification.course}</span>
+									<p>{certification.institution}</p>
+								</li>
+							))
+						}
+					</ul>
+				</>
+			}
 		</section>
 	);
 }

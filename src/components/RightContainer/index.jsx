@@ -18,11 +18,13 @@ export function RightContainer() {
 			<h1>Resumo</h1>
 			<br />
 			<p className={styled.resume}>
-				Minha primeira experiência e base profissional ocorreu na SKY Brasil, permanecendo de 2008 até 2016 como líder de equipe e projetos, adquirindo vasto conhecimento em gestão, liderança, resolução de problemas, recrutamento, seleção, atingimento de metas, treinamentos etc.
+				Minha primeira experiência profissional foi na SKY Brasil, onde trabalhei de 2008 a 2016 como líder de equipe e projetos. Durante esses anos, adquiri amplo conhecimento em gestão, liderança, resolução de problemas, recrutamento, seleção, atingimento de metas e treinamentos.
 				<br /> <br />
-				Apaixonado pela programação e front-end desde meus 13 anos quando fiz meu primeiro curso de HTML e CSS pela Impacta Tecnologia em 2009, desde então nunca deixei de estudar e realizar alguns projetos freelance em paralelo, quando em 2016, ao encerrar meu ciclo na SKY Brasil, decidi focar integralmente nessa área que me fascina, atuando de 2016 até 2022 pela Agência H1 Code.
+				Desde os meus 13 anos, tenho paixão por programação e front-end, tendo realizado meu primeiro curso de HTML e CSS pela Impacta Tecnologia em 2009. Desde então, nunca deixei de estudar e participar de projetos freelance paralelamente. Em 2016, quando encerrei minha jornada na SKY Brasil, decidi me dedicar integralmente a esta área que tanto me fascina e, desde então, atuei pela Agência H1 Code até 2022.
 				<br /> <br />
-				Em 2022 iniciei minha jornada como Desenvolvedor Front-end Pleno na Consorciei, responsável por todos os sistemas internos e externos para gestão de compras, vendas e transferências de cotas de consórcio, atuando com as tecnologias mais atuais do mercado.
+				Em 2022, comecei a trabalhar como Desenvolvedor Front-end Pleno na Consorciei, onde sou responsável por todos os sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio, utilizando as tecnologias mais atuais do mercado.
+				<br /> <br />
+				Sou apaixonado por criar interfaces de usuário atraentes e intuitivas, e tenho uma habilidade particular para transformar designs em código limpo e eficiente. Além de meu trabalho como desenvolvedor, também sou um entusiasta de tecnologia em geral e adoro compartilhar meus conhecimentos com outros profissionais da área.
 			</p>
 			<br />
 
@@ -34,7 +36,7 @@ export function RightContainer() {
 				<p className={styled.job}>Desenvolvedor Front-end Pleno</p>
 				<p className={styled.time}>mar de 2022 - o momento • {experiencePeriod('03/07/2022', '')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Desenvolvedor front-end responsável por todos os sistemas internos e externos da Consorciei para gestão de compras, vendas e tranferências de cotas de consórcio. Atuando com tecnologias como: ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress, Testing Library etc</p>
+				<p className={styled.jobDescription}>Como Desenvolvedor Front-end na Consorciei, sou responsável por todos os sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo as seguintes tecnologias: ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library.</p>
 			</div>
 
 			<div className={styled.experience}>
@@ -42,7 +44,7 @@ export function RightContainer() {
 				<p className={styled.job}>Desenvolvedor Front-end</p>
 				<p className={styled.time}>set de 2016 - mar de 2022 • {experiencePeriod('09/01/2016', '01/03/2022')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Atuei como desenvolvedor front-end criando e realizando manutenções em sites, lojas virtuais, blogs, landing pages, dashboards etc. De acordo com o projeto utilizo tecnologias como: HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, consumo de API, ReactJS, NextJS, TypeScript, Redux, Styled Components e Axios.</p>
+				<p className={styled.jobDescription}>Atuei como Desenvolvedor Front-end, criando e realizando manutenções em sites, lojas virtuais, blogs, landing pages e dashboards, entre outros. De acordo com o projeto, utilizava tecnologias como HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, consumo de API, ReactJS, NextJS, TypeScript, Redux e Styled Components, bem como Axios para realizar requisições HTTP.</p>
 			</div>
 
 			<div className={styled.experience}>
@@ -50,23 +52,23 @@ export function RightContainer() {
 				<p className={styled.job}>CEO</p>
 				<p className={styled.time}>set de 2016 - jan de 2021 • {experiencePeriod('09/01/2016', '01/01/2021')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Atuei diretamente com infraestrutura de redes, servidores dedicados, cloud computing, virtualização, gerenciamento de servidores Linux, hospedagem de sites, registro de domínios, além de atendimento e suporte aos clientes da empresa.</p>
+				<p className={styled.jobDescription}>Durante minha experiência profissional, atuei diretamente com infraestrutura de redes, servidores dedicados, cloud computing, virtualização, gerenciamento de servidores Linux, hospedagem de sites, registro de domínios, além de prestar atendimento e suporte aos clientes da empresa.</p>
 			</div>
 
 			<div className={styled.experience} style={{ marginBottom: 0 }}>
 				<h3>SKY Brasil</h3>
-				<p className={styled.time}>8 anos 8 meses</p>
+				<p className={styled.time}>jan de 2008 - ago de 2016 • {experiencePeriod('01/01/2008', '01/08/2016')}</p>
 
 				<p className={styled.job}>Líder de equipe</p>
 				<p className={styled.time}>jan de 2014 - ago de 2016 • {experiencePeriod('01/01/2014', '08/01/2016')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Como líder de equipe, meu principal trabalho era gerenciar e treinar toda equipe interna de controladores, bem como fazer reuniões para traçar estratégias para atingimento de metas e prazos, realizar recrutamento e seleção de novos controladores, participar e representar a equipe em eventos, reuniões e treinamentos externos etc.</p>
+				<p className={styled.jobDescription}>Enquanto líder de equipe, meu principal trabalho era gerenciar e treinar toda a equipe interna de controladores, além de realizar reuniões para traçar estratégias para atingimento de metas e prazos. Também era responsável por realizar recrutamento e seleção de novos controladores, participando e representando a equipe em eventos, reuniões e treinamentos externos, entre outras atividades.</p>
 				<br />
 
 				<p className={styled.job}>Controlador técnico</p>
 				<p className={styled.time}>jan de 2008 - jan de 2014 • {experiencePeriod('01/01/2008', '01/01/2014')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Minha primeira experiência profissional aos 14 anos, onde realizava elaboração, estruturação e controle em tempo real de uma equipe com mais de 30 técnicos onde realizavam instalação e assistência técnica do produto da SKY na casa dos consumidores. Também realizava atendimento aos clientes com agendamentos prévios das visitas técnicas para montagem e encaixe dos roteiros.</p>
+				<p className={styled.jobDescription}>Minha primeira experiência profissional foi aos 14 anos, onde me responsabilizava por elaborar, estruturar e controlar em tempo real uma equipe com mais de 30 técnicos que realizavam instalação e assistência técnica do produto da SKY na casa dos consumidores. Além disso, também realizava atendimento aos clientes agendando visitas técnicas para montagem e encaixe dos roteiros.</p>
 			</div>
 			<br />
 			<h1>Formação acadêmica</h1>
