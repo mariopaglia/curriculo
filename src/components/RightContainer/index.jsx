@@ -49,7 +49,7 @@ export function RightContainer() {
 
 			<div className={styled.experience}>
 				<h3>Paglia Host</h3>
-				<p className={styled.job}>CEO</p>
+				<p className={styled.job}>Administrador de rede</p>
 				<p className={styled.time}>set de 2016 - jan de 2021 • {experiencePeriod('09/01/2016', '01/01/2021')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
 				<p className={styled.jobDescription}>Durante minha experiência profissional, atuei diretamente com infraestrutura de redes, servidores dedicados, cloud computing, virtualização, gerenciamento de servidores Linux, hospedagem de sites, registro de domínios, além de prestar atendimento e suporte aos clientes da empresa.</p>
