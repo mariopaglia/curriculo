@@ -1,13 +1,26 @@
 import React from 'react';
 import styled from './styles.module.scss';
-import { formatDistance } from 'date-fns'
-import { ptBR } from 'date-fns/locale'
 
 export function RightContainer() {
 
-	const experiencePeriod = (primaryDate, secondaryDate) => {
-		return formatDistance(new Date(primaryDate), secondaryDate ? new Date(secondaryDate) : new Date(), { locale: ptBR })
-	};
+	const experiencePeriod = (date1, date2) => {
+		date1 = date1 ? new Date(date1.split("/").reverse().join("-")) : new Date();
+		date2 = date2 ? new Date(date2.split("/").reverse().join("-")) : new Date();
+		if (!date1.getTime()) {
+			return "Data inicial inválida";
+		}
+		if (date1.getTime() > date2.getTime()) {
+			return "Data final é menor que a data inicial";
+		}
+		let years = date2.getFullYear() - date1.getFullYear();
+		let months = (date2.getMonth() - date1.getMonth()) + (12 * years);
+		years = Math.floor(months / 12);
+		months = months - (years * 12);
+		if (years > 0) {
+			return `${date1.toLocaleString('pt-BR', { month: 'short' })} de ${date1.getFullYear()} - ${date2.toLocaleString('pt-BR', { month: 'short' })} de ${date2.getFullYear()} · ${years} ano${years > 1 ? "s" : ""} ${months} meses`;
+		}
+		return `${date1.toLocaleString('pt-BR', { month: 'short' })} de ${date1.getFullYear()} - ${date2.toLocaleString('pt-BR', { month: 'short' })} de ${date2.getFullYear()} · ${months} meses`;
+	}
 
 	return (
 		<section className={styled.rightContainer}>
@@ -33,42 +46,50 @@ export function RightContainer() {
 
 			<div className={styled.experience}>
 				<h3>Consorciei</h3>
-				<p className={styled.job}>Desenvolvedor Front-end Pleno</p>
-				<p className={styled.time}>mar de 2022 - o momento • {experiencePeriod('03/07/2022', '')}</p>
+				<p className={styled.time}>{experiencePeriod('07/03/2022')}</p>
+
+				<p className={styled.job}>Desenvolvedor Front-end Pleno II</p>
+				<p className={styled.time}>{experiencePeriod('23/01/2023')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Como Desenvolvedor Front-end na Consorciei, sou responsável por todos os sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo as seguintes tecnologias: ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library.</p>
+				<p className={styled.jobDescription}>Como Desenvolvedor Front-end Pleno II na Consorciei, sou responsável por liderar o desenvolvimento e manutenção de sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo tecnologias avançadas como ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library para criar soluções escaláveis e altamente desempenháveis. Além disso, lidero a equipe para garantir a entrega de projetos no prazo e com alta qualidade.</p>
+				<br />
+
+				<p className={styled.job}>Desenvolvedor Front-end Pleno I</p>
+				<p className={styled.time}>{experiencePeriod('07/03/2022', '23/01/2023')}</p>
+				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
+				<p className={styled.jobDescription}>Como Desenvolvedor Front-end Pleno I na Consorciei, sou responsável por desenvolver e manter sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo tecnologias modernas como ReactJS, NextJS, Styled Components, Context API e Hooks para criar interfaces de usuário eficientes e intuitivas. Além disso, trabalho com TypeScript para garantir qualidade no código e Axios para realizar requisições HTTP.</p>
 			</div>
 
 			<div className={styled.experience}>
 				<h3>Agência H1 Code</h3>
 				<p className={styled.job}>Desenvolvedor Front-end</p>
-				<p className={styled.time}>set de 2016 - mar de 2022 • {experiencePeriod('09/01/2016', '01/03/2022')}</p>
+				<p className={styled.time}>{experiencePeriod('09/01/2016', '01/03/2022')}</p>
 				<p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Atuei como Desenvolvedor Front-end, criando e realizando manutenções em sites, lojas virtuais, blogs, landing pages e dashboards, entre outros. De acordo com o projeto, utilizava tecnologias como HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, consumo de API, ReactJS, NextJS, TypeScript, Redux e Styled Components, bem como Axios para realizar requisições HTTP.</p>
+				<p className={styled.jobDescription}>Atuei como desenvolvedor front-end, criando e realizando manutenções em projetos web, incluindo sites, lojas virtuais, blogs, landing pages e dashboards. Utilizei tecnologias como HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, ReactJS, NextJS, TypeScript, Redux e Styled Components para desenvolver esses projetos. Além disso, utilizei o Axios para realizar requisições HTTP e integrar com APIs externas.</p>
 			</div>
 
 			<div className={styled.experience}>
 				<h3>Paglia Host</h3>
-				<p className={styled.job}>CEO</p>
-				<p className={styled.time}>set de 2016 - jan de 2021 • {experiencePeriod('09/01/2016', '01/01/2021')}</p>
+				<p className={styled.job}>Administrador de rede</p>
+				<p className={styled.time}>{experiencePeriod('09/01/2016', '01/01/2021')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Durante minha experiência profissional, atuei diretamente com infraestrutura de redes, servidores dedicados, cloud computing, virtualização, gerenciamento de servidores Linux, hospedagem de sites, registro de domínios, além de prestar atendimento e suporte aos clientes da empresa.</p>
+				<p className={styled.jobDescription}>Atuei como profissional de infraestrutura de redes, gerenciando servidores dedicados, computação em nuvem, virtualização, administração de sistemas Linux, hospedagem de sites e registro de domínios. Além disso, forneci suporte e atendimento aos clientes da empresa.</p>
 			</div>
 
 			<div className={styled.experience} style={{ marginBottom: 0 }}>
 				<h3>SKY Brasil</h3>
-				<p className={styled.time}>jan de 2008 - ago de 2016 • {experiencePeriod('01/01/2008', '01/08/2016')}</p>
+				<p className={styled.time}>{experiencePeriod('01/01/2008', '01/08/2016')}</p>
 
 				<p className={styled.job}>Líder de equipe</p>
-				<p className={styled.time}>jan de 2014 - ago de 2016 • {experiencePeriod('01/01/2014', '08/01/2016')}</p>
+				<p className={styled.time}>{experiencePeriod('01/01/2014', '08/01/2016')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Enquanto líder de equipe, meu principal trabalho era gerenciar e treinar toda a equipe interna de controladores, além de realizar reuniões para traçar estratégias para atingimento de metas e prazos. Também era responsável por realizar recrutamento e seleção de novos controladores, participando e representando a equipe em eventos, reuniões e treinamentos externos, entre outras atividades.</p>
+				<p className={styled.jobDescription}>Como líder de equipe, minhas principais responsabilidades incluíam gerenciar e treinar uma equipe interna de controladores, planejar estratégias para alcançar metas e prazos, realizar recrutamento e seleção de novos controladores, e representar a equipe em eventos, reuniões e treinamentos externos.</p>
 				<br />
 
 				<p className={styled.job}>Controlador técnico</p>
-				<p className={styled.time}>jan de 2008 - jan de 2014 • {experiencePeriod('01/01/2008', '01/01/2014')}</p>
+				<p className={styled.time}>{experiencePeriod('01/01/2008', '01/01/2014')}</p>
 				<p className={styled.location}>São Paulo, São Paulo, Brasil</p>
-				<p className={styled.jobDescription}>Minha primeira experiência profissional foi aos 14 anos, onde me responsabilizava por elaborar, estruturar e controlar em tempo real uma equipe com mais de 30 técnicos que realizavam instalação e assistência técnica do produto da SKY na casa dos consumidores. Além disso, também realizava atendimento aos clientes agendando visitas técnicas para montagem e encaixe dos roteiros.</p>
+				<p className={styled.jobDescription}>Como controlador técnico, minhas responsabilidades incluíam supervisionar e gerenciar uma equipe de mais de 30 técnicos que realizavam instalações e assistência técnica dos produtos da SKY em residências. Além disso, também atendia aos clientes, agendando visitas técnicas para montagem e instalação dos equipamentos.</p>
 			</div>
 			<br />
 			<h1>Formação acadêmica</h1>
