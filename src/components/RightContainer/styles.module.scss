@@ -1,62 +1,62 @@
 .rightContainer {
-	display: flex;
-	flex-direction: column;
-	color: var(--blue-800);
-	background: var(--background-right);
-	width: 70%;
-	height: 100%;
-	padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue-800);
+  background: var(--background-right);
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
 
-	h1 {
-		color: var(--blue-500);
-	}
+  h1 {
+    color: var(--blue-500);
+  }
 
-	h1:first-child {
-		font-size: 2rem;
-	}
+  h1:first-child {
+    font-size: 2rem;
+  }
 
-	@media screen and (max-width: 768px) {
-		order: 1;
-		width: 100%;
-	}
+  @media screen and (max-width: 768px) {
+    order: 1;
+    width: 100%;
+  }
 }
 
 .currentJob {
-	font-weight: bold;
-	color: var(--gray-600);
+  font-weight: bold;
+  color: var(--gray-600);
 }
 
 .resume {
-	max-width: 900px;
-	font-size: 0.9rem;
-	text-align: justify;
+  max-width: 900px;
+  font-size: 0.9rem;
+  text-align: justify;
 }
 
 .experience {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 
-	h3 {
-		color: var(--gray-600);
-	}
+  h3 {
+    color: var(--gray-600);
+  }
 
-	.job {
-		color: var(--blue-500);
-	}
+  .job {
+    color: var(--blue-500);
+  }
 
-	.time,
-	.location {
-		font-size: 0.8rem;
-	}
+  .time,
+  .location {
+    font-size: 0.8rem;
+  }
 
-	.location {
-		color: var(--gray-600);
-		font-style: italic;
-	}
+  .location {
+    color: var(--gray-600);
+    font-style: italic;
+  }
 
-	.jobDescription {
-		margin-top: 0.9rem;
-		max-width: 900px;
-		font-size: 0.9rem;
-		text-align: justify;
-	}
+  .jobDescription {
+    margin-top: 0.9rem;
+    max-width: 900px;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
 }

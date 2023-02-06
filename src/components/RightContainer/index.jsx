@@ -12,22 +12,19 @@ export const RightContainer = () => {
       <h1>Resumo</h1>
       <br />
       <p className={styled.resume}>
-        Minha primeira experiência profissional foi na SKY Brasil, onde trabalhei de 2008 a 2016 como líder de equipe e
-        projetos. Durante esses anos, adquiri amplo conhecimento em gestão, liderança, resolução de problemas,
-        recrutamento, seleção, atingimento de metas e treinamentos.
+        Sou um apaixonado por programação desde os 13 anos. Desde que fiz meu primeiro curso de HTML, CSS e Javascript
+        na Impacta Tecnologia em 2007, nunca mais abandonei minha paixão e o gosto pela programação. Como desenvolvedor
+        front-end, tenho mais de 7 anos de experiência atuando diretamente na área, desde 2016.
         <br /> <br />
-        Desde os meus 13 anos, tenho paixão por programação e front-end, tendo realizado meu primeiro curso de HTML e
-        CSS pela Impacta Tecnologia em 2009. Desde então, nunca deixei de estudar e participar de projetos freelance
-        paralelamente. Em 2016, quando encerrei minha jornada na SKY Brasil, decidi me dedicar integralmente a esta área
-        que tanto me fascina e, desde então, atuei pela Agência H1 Code até 2022.
+        Minha paixão é criar interfaces de usuário atraentes e intuitivas que tornem a vida dos usuários mais fácil e
+        agradável. Além disso, sou apaixonado por sempre me aperfeiçoar e aprender, estudando novas tecnologias e
+        aprimorando minhas habilidades.
         <br /> <br />
-        Em 2022, comecei a trabalhar como Desenvolvedor Front-end Pleno na Consorciei, onde sou responsável por todos os
-        sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio, utilizando as
-        tecnologias mais atuais do mercado.
+        Também sou apaixonado por liderar e ensinar pessoas e equipes a atingirem seus melhores resultados. Acredito que
+        é através do trabalho em equipe e da liderança eficaz que conseguimos alcançar os melhores resultados.
         <br /> <br />
-        Sou apaixonado por criar interfaces de usuário atraentes e intuitivas, e tenho uma habilidade particular para
-        transformar designs em código limpo e eficiente. Além de meu trabalho como desenvolvedor, também sou um
-        entusiasta de tecnologia em geral e adoro compartilhar meus conhecimentos com outros profissionais da área.
+        Se você procura um profissional apaixonado, dedicado e com habilidades comprovadas, venha conhecer mais sobre
+        minha jornada e realizações na programação.
       </p>
       <br />
 
@@ -36,30 +33,16 @@ export const RightContainer = () => {
 
       <div className={styled.experience}>
         <h3>Consorciei</h3>
-        <p className={styled.time}>{experiencePeriod('07/03/2022')}</p>
-
-        <p className={styled.job}>Desenvolvedor Front-end Pleno II</p>
-        <p className={styled.time}>{experiencePeriod('23/01/2023')}</p>
+        <p className={styled.job}>Desenvolvedor Front-end Pleno</p>
+        <p className={styled.time}>{experiencePeriod('07/03/2022', '')}</p>
         <p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
         <p className={styled.jobDescription}>
-          Como Desenvolvedor Front-end Pleno II na Consorciei, sou responsável por liderar o desenvolvimento e
-          manutenção de sistemas internos e externos de gestão de compras, vendas e transferências de cotas de
-          consórcio. Utilizo tecnologias avançadas como ReactJS, NextJS, Styled Components, Context API, Hooks,
-          TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library para
-          criar soluções escaláveis e altamente desempenháveis. Além disso, lidero a equipe para garantir a entrega de
-          projetos no prazo e com alta qualidade.
-        </p>
-        <br />
-
-        <p className={styled.job}>Desenvolvedor Front-end Pleno I</p>
-        <p className={styled.time}>{experiencePeriod('07/03/2022', '23/01/2023')}</p>
-        <p className={styled.location}>Jundiaí, São Paulo, Brasil</p>
-        <p className={styled.jobDescription}>
-          Como Desenvolvedor Front-end Pleno I na Consorciei, sou responsável por desenvolver e manter sistemas internos
-          e externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo tecnologias modernas
-          como ReactJS, NextJS, Styled Components, Context API e Hooks para criar interfaces de usuário eficientes e
-          intuitivas. Além disso, trabalho com TypeScript para garantir qualidade no código e Axios para realizar
-          requisições HTTP.
+          Como Desenvolvedor Front-end Pleno na Consorciei, sou responsável por desenvolver e manter sistemas internos e
+          externos de gestão de compras, vendas e transferências de cotas de consórcio. Utilizo tecnologias modernas e
+          avançadas, incluindo ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda,
+          Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library para criar soluções escaláveis e
+          altamente desempenháveis com interfaces de usuário eficientes e intuitivas. Além disso, lidero a equipe e
+          garanto a entrega de projetos no prazo e com alta qualidade.
         </p>
       </div>
 
@@ -78,7 +61,7 @@ export const RightContainer = () => {
 
       <div className={styled.experience} style={{ marginBottom: 0 }}>
         <h3>SKY Brasil</h3>
-        <p className={styled.time}>{experiencePeriod('01/01/2008', '01/08/2016')}</p>
+        <p className={styled.time}>{experiencePeriod('01/01/2008', '08/01/2016')}</p>
 
         <p className={styled.job}>Líder de equipe</p>
         <p className={styled.time}>{experiencePeriod('01/01/2014', '08/01/2016')}</p>

@@ -20,12 +20,15 @@ import {
   SiTestinglibrary,
   SiAmazonaws,
   SiTerraform,
+  SiStyledcomponents,
+  SiJenkins,
 } from 'react-icons/si';
 
 export function LeftContainer() {
   const technicalSkillsList = [
     { label: 'HTML', icon: <DiHtml5 /> },
     { label: 'CSS/SASS', icon: <DiSass /> },
+    { label: 'Styled Components', icon: <SiStyledcomponents /> },
     { label: 'JavaScript', icon: <DiJavascript /> },
     { label: 'ReactJS', icon: <DiReact /> },
     { label: 'NextJS', icon: <SiNextdotjs /> },
@@ -36,6 +39,7 @@ export function LeftContainer() {
     { label: 'Testing Library', icon: <SiTestinglibrary /> },
     { label: 'AWS', icon: <SiAmazonaws /> },
     { label: 'Terraform', icon: <SiTerraform /> },
+    { label: 'CI/CD', icon: <SiJenkins /> },
   ];
 
   const interpersonalSkillsList = [
@@ -65,8 +69,8 @@ export function LeftContainer() {
     { course: 'Desenvolvimento Web', institution: 'Udemy' },
     { course: 'PHP', institution: 'Udemy' },
     { course: 'MYSQL', institution: 'Udemy' },
-    { course: 'Liderança e Gestão de Pessoas', institution: 'SKY Brasil' },
     { course: 'Google Adwords', institution: 'Goobec' },
+    { course: 'Liderança e Gestão de Pessoas', institution: 'SKY Brasil' },
   ];
 
   return (
@@ -80,31 +84,31 @@ export function LeftContainer() {
         </p>
         <p>
           <FaPhoneAlt />{' '}
-          <a href="https://wa.me/5511948413923" target="_blank" rel="noreferrer">
+          <a href='https://wa.me/5511948413923' target='_blank' rel='noreferrer'>
             (11) 94841-3923
           </a>
         </p>
         <p>
           <FaEnvelope />{' '}
-          <a href="mailto:mpagliajr@gmail.com" target="_blank" rel="noreferrer">
+          <a href='mailto:mpagliajr@gmail.com' target='_blank' rel='noreferrer'>
             mpagliajr@gmail.com
           </a>
         </p>
         <p>
           <FaLinkedin />{' '}
-          <a href="https://linkedin.com/in/mpagliajr" target="_blank" rel="noreferrer">
+          <a href='https://linkedin.com/in/mpagliajr' target='_blank' rel='noreferrer'>
             linkedin.com/in/mpagliajr
           </a>
         </p>
         <p>
           <FaGithub />{' '}
-          <a href="https://github.com/mariopaglia" target="_blank" rel="noreferrer">
+          <a href='https://github.com/mariopaglia' target='_blank' rel='noreferrer'>
             github.com/mariopaglia
           </a>
         </p>
         <p>
           <FaBehanceSquare />{' '}
-          <a href="https://www.behance.net/mariopaglia" target="_blank" rel="noreferrer">
+          <a href='https://www.behance.net/mariopaglia' target='_blank' rel='noreferrer'>
             behance.net/mariopaglia
           </a>
         </p>
@@ -116,7 +120,7 @@ export function LeftContainer() {
       <br />
       <div className={styled.skills}>
         {technicalSkillsList.map((skill, index) => (
-          <Chip key={index} icon={skill.icon} color="primary" label={skill.label} variant="outlined" />
+          <Chip key={index} icon={skill.icon} color='primary' label={skill.label} variant='outlined' />
         ))}
       </div>
       <br />
@@ -125,7 +129,7 @@ export function LeftContainer() {
       <br />
       <div className={styled.skills}>
         {interpersonalSkillsList.map((skill, index) => (
-          <Chip key={index} icon={<FaHandshake />} color="primary" label={skill} variant="outlined" />
+          <Chip key={index} icon={<FaHandshake />} color='primary' label={skill} variant='outlined' />
         ))}
       </div>
       <br />
@@ -134,16 +138,14 @@ export function LeftContainer() {
       <br />
 
       {
-        <>
-          <ul>
-            {certificationsList.map((certification, index) => (
-              <li key={index}>
-                <span>{certification.course}</span>
-                <p>{certification.institution}</p>
-              </li>
-            ))}
-          </ul>
-        </>
+        <div className={styled.certification}>
+          {certificationsList.map((certification, index) => (
+            <div key={index}>
+              <span>{certification.course}</span>
+              <p>{certification.institution}</p>
+            </div>
+          ))}
+        </div>
       }
     </section>
   );

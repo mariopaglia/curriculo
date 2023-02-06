@@ -1,3 +1,13 @@
+function verifyMonths(month) {
+  if (month > 1) {
+    return month + ' meses';
+  } else if (month === 1) {
+    return month + ' mês';
+  } else {
+    return '';
+  }
+}
+
 export const experiencePeriod = (date1, date2) => {
   date1 = date1 ? new Date(date1.split('/').reverse().join('-')) : new Date();
   date2 = date2 ? new Date(date2.split('/').reverse().join('-')) : new Date();
@@ -15,10 +25,10 @@ export const experiencePeriod = (date1, date2) => {
     return `${date1.toLocaleString('pt-BR', { month: 'short' })} de ${date1.getFullYear()} - ${date2.toLocaleString(
       'pt-BR',
       { month: 'short' }
-    )} de ${date2.getFullYear()} · ${years} ano${years > 1 ? 's' : ''} ${months} meses`;
+    )} de ${date2.getFullYear()} · ${years} ano${years > 1 ? 's' : ''} ${verifyMonths(months)}`;
   }
   return `${date1.toLocaleString('pt-BR', { month: 'short' })} de ${date1.getFullYear()} - ${date2.toLocaleString(
     'pt-BR',
     { month: 'short' }
-  )} de ${date2.getFullYear()} · ${months} meses`;
+  )} de ${date2.getFullYear()} · ${verifyMonths(months)}`;
 };
