@@ -16,4 +16,4 @@ Se gostou do projeto, não esqueça de marcar o repositório com uma estrela.
 
 Desenvolvido por Mário Paglia
 
-[GitHub](https://github.com/mariopaglia) | [Linkedin](https://www.linkedin.com/in/mpagliajr/)
+[GitHub](https://github.com/mariopaglia) | [Linkedin](https://www.linkedin.com/in/mariopagliadev/)

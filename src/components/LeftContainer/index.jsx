@@ -90,14 +90,14 @@ export function LeftContainer() {
         </p>
         <p>
           <FaEnvelope />{' '}
-          <a href='mailto:mpagliajr@gmail.com' target='_blank' rel='noreferrer'>
-            mpagliajr@gmail.com
+          <a href='mailto:contato@mariopaglia.dev.br' target='_blank' rel='noreferrer'>
+            contato@mariopaglia.dev.br
           </a>
         </p>
         <p>
           <FaLinkedin />{' '}
-          <a href='https://linkedin.com/in/mpagliajr' target='_blank' rel='noreferrer'>
-            linkedin.com/in/mpagliajr
+          <a href='https://linkedin.com/in/mariopagliadev' target='_blank' rel='noreferrer'>
+            linkedin.com/in/mariopagliadev
           </a>
         </p>
         <p>
