@@ -7,6 +7,7 @@
   width: 30%;
   min-width: 30vh;
   padding: 2rem;
+  page-break-inside: avoid;
 
   @media screen and (max-width: 768px) {
     width: 100%;

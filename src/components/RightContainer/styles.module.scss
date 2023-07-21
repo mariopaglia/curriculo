@@ -6,6 +6,7 @@
   width: 70%;
   height: 100%;
   padding: 2rem;
+  page-break-inside: avoid;
 
   h1 {
     color: var(--blue-500);
@@ -34,6 +35,7 @@
 
 .experience {
   margin-bottom: 20px;
+  page-break-inside: avoid;
 
   h3 {
     color: var(--gray-600);

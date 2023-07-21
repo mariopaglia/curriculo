@@ -1,15 +1,7 @@
 import React from 'react';
 import styled from './styles.module.scss';
 
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-  FaBehanceSquare,
-  FaHandshake,
-  FaPhoneAlt,
-} from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaLinkedin, FaGithub, FaHandshake, FaPhoneAlt } from 'react-icons/fa';
 import { Chip } from '@mui/material';
 import { DiHtml5, DiJavascript, DiReact, DiSass, DiGitBranch } from 'react-icons/di';
 import {
@@ -22,6 +14,8 @@ import {
   SiTerraform,
   SiStyledcomponents,
   SiJenkins,
+  SiLinktree,
+  SiServerless,
 } from 'react-icons/si';
 
 export function LeftContainer() {
@@ -39,6 +33,7 @@ export function LeftContainer() {
     { label: 'Testing Library', icon: <SiTestinglibrary /> },
     { label: 'AWS', icon: <SiAmazonaws /> },
     { label: 'Terraform', icon: <SiTerraform /> },
+    { label: 'Serverless', icon: <SiServerless /> },
     { label: 'CI/CD', icon: <SiJenkins /> },
   ];
 
@@ -107,9 +102,9 @@ export function LeftContainer() {
           </a>
         </p>
         <p>
-          <FaBehanceSquare />{' '}
-          <a href='https://www.behance.net/mariopaglia' target='_blank' rel='noreferrer'>
-            behance.net/mariopaglia
+          <SiLinktree />{' '}
+          <a href='https://linktr.ee/devmariopaglia' target='_blank' rel='noreferrer'>
+            linktr.ee/devmariopaglia
           </a>
         </p>
       </div>
