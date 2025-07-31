@@ -1,0 +1,53 @@
+.footer {
+  background: var(--background-dark);
+  color: var(--text-light);
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-dark);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--container-padding);
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .copyright {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .madeWith {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .heart {
+      color: #ef4444;
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

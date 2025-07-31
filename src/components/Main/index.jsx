@@ -1,13 +1,28 @@
 import React from 'react';
-import { LeftContainer } from '../LeftContainer';
-import { RightContainer } from '../RightContainer';
-import styled from './styles.module.scss';
+import { About } from '../About';
+import { Contact } from '../Contact';
+import { Experience } from '../Experience';
+import { Footer } from '../Footer';
+import { Hero } from '../Hero';
+import { Navigation } from '../Navigation';
+import { Skills } from '../Skills';
 
+/**
+ * Main component that renders all sections
+ * @returns {JSX.Element} Main component
+ */
 export function Main() {
   return (
-    <main className={styled.container}>
-      <LeftContainer />
-      <RightContainer />
-    </main>
+    <>
+      <Navigation />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
