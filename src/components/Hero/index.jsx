@@ -17,7 +17,7 @@ export const Hero = () => {
         window.open('https://wa.me/5511948413923', '_blank');
         break;
       case 'linkedin':
-        window.open('https://linkedin.com/in/mariopagliadev', '_blank');
+        window.open('https://www.linkedin.com/in/devmariopaglia/', '_blank');
         break;
       case 'github':
         window.open('https://github.com/mariopaglia', '_blank');
@@ -45,18 +45,19 @@ export const Hero = () => {
             <h1 className={styled.title}>
               Olá, eu sou <span className={styled.highlight}>Mario Paglia</span>
             </h1>
-            <h2 className={styled.subtitle}>Desenvolvedor Front-end</h2>
+            <h2 className={styled.subtitle}>Desenvolvedor Front-end & Consultor</h2>
             <p className={styled.description}>
-              Com mais de 7 anos de experiência em desenvolvimento web, especializo-me em criar interfaces modernas e
-              intuitivas utilizando React, Next.js e TypeScript.
+              Com mais de 12 anos de experiência em desenvolvimento web, especializo-me em criar interfaces modernas e
+              intuitivas utilizando React, Next.js e TypeScript. Ofereço serviços de desenvolvimento e consultoria
+              técnica.
             </p>
 
             <div className={styled.actions}>
               <button className={styled.btnPrimary} onClick={() => scrollToSection('contact')}>
                 Entre em Contato
               </button>
-              <button className={styled.btnSecondary} onClick={() => scrollToSection('experience')}>
-                Ver Experiência
+              <button className={styled.btnSecondary} onClick={() => scrollToSection('services')}>
+                Ver Serviços
               </button>
             </div>
           </div>

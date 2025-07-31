@@ -50,7 +50,7 @@ export const About = () => {
                 Tecnologia, a chama foi acesa - e tem crescido desde então.
               </p>
               <p>
-                Com mais de 7 anos de experiência direta como Desenvolvedor Front-end, tenho o prazer de criar
+                Com mais de 12 anos de experiência direta como Desenvolvedor Front-end, tenho o prazer de criar
                 interfaces de usuário atraentes e intuitivas que enriquecem a experiência do usuário. Essa paixão é
                 alimentada pelo meu compromisso em permanecer na vanguarda das tendências tecnológicas, aprimorando
                 constantemente minhas habilidades e conhecimentos.

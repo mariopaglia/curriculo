@@ -12,7 +12,7 @@ export const Experience = () => {
       company: 'Consorciei',
       position: 'Desenvolvedor Front-end',
       period: experiencePeriod('07/03/2022', ''),
-      location: 'Jundiaí, São Paulo, Brasil',
+      location: 'Valinhos, São Paulo, Brasil',
       description: [
         'Como Desenvolvedor Front-end na Consorciei, meu papel vai além do desenvolvimento - é também uma questão de liderança e entrega de excelência. Dedico-me ao desenvolvimento de sistemas sofisticados que atendem às necessidades dos nossos principais parceiros, como Itaú, Santander e Porto Seguro.',
         'Com um foco incansável na qualidade, garanto a entrega eficaz de projetos dentro do prazo, utilizando tecnologias avançadas para otimizar sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio.',
@@ -34,7 +34,7 @@ export const Experience = () => {
       company: 'Agência H1 Code',
       position: 'Desenvolvedor Front-end',
       period: experiencePeriod('09/01/2016', '01/03/2022'),
-      location: 'Jundiaí, São Paulo, Brasil',
+      location: 'Valinhos, São Paulo, Brasil',
       description: [
         'No papel de Desenvolvedor Front-end na Agência H1 Code, conduzi o desenvolvimento e a manutenção de uma variedade de projetos web, que abrangiam desde sites e lojas virtuais até blogs, landing pages e dashboards.',
         'Em minha atuação, empreguei uma ampla gama de tecnologias para garantir soluções robustas e de alta qualidade. Entre elas, HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, ReactJS, NextJS, TypeScript, Redux e Styled Components.',

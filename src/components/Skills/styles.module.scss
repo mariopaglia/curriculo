@@ -53,11 +53,11 @@
 
   .skillsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
 
@@ -67,6 +67,7 @@
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     transition: all 0.3s ease;
+    text-align: center;
 
     &:hover {
       transform: translateY(-2px);
@@ -77,20 +78,20 @@
 
   .skillHeader {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
 
     .skillIcon {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 3rem;
+      height: 3rem;
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
       border-radius: var(--radius-md);
       color: white;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
 
     .skillName {
@@ -98,28 +99,6 @@
       color: var(--text-primary);
       font-size: 1rem;
     }
-  }
-
-  .progressBar {
-    width: 100%;
-    height: 0.5rem;
-    background: var(--border);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-  }
-
-  .progressFill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-    border-radius: var(--radius-sm);
-    transition: width 1s ease;
-  }
-
-  .skillLevel {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    font-weight: 500;
   }
 
   .interpersonalGrid {

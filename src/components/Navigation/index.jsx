@@ -36,6 +36,7 @@ export const Navigation = () => {
     { id: 'about', label: 'Sobre' },
     { id: 'experience', label: 'Experiência' },
     { id: 'skills', label: 'Skills' },
+    { id: 'services', label: 'Serviços' },
     { id: 'contact', label: 'Contato' },
   ];
 

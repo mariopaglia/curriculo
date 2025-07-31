@@ -31,20 +31,20 @@ import styled from './styles.module.scss';
  */
 export const Skills = () => {
   const technicalSkills = [
-    { name: 'HTML', icon: <DiHtml5 />, level: 95 },
-    { name: 'CSS/SASS', icon: <DiSass />, level: 90 },
-    { name: 'Styled Components', icon: <SiStyledcomponents />, level: 85 },
-    { name: 'JavaScript', icon: <DiJavascript />, level: 90 },
-    { name: 'ReactJS', icon: <DiReact />, level: 95 },
-    { name: 'NextJS', icon: <SiNextdotjs />, level: 85 },
-    { name: 'TypeScript', icon: <SiTypescript />, level: 80 },
-    { name: 'Git/GitHub', icon: <DiGitBranch />, level: 85 },
-    { name: 'Jest', icon: <SiJest />, level: 75 },
-    { name: 'Cypress', icon: <SiCypress />, level: 70 },
-    { name: 'Testing Library', icon: <SiTestinglibrary />, level: 75 },
-    { name: 'AWS', icon: <SiAmazonaws />, level: 70 },
-    { name: 'Terraform', icon: <SiTerraform />, level: 65 },
-    { name: 'Serverless', icon: <SiServerless />, level: 70 },
+    { name: 'HTML', icon: <DiHtml5 /> },
+    { name: 'CSS/SASS', icon: <DiSass /> },
+    { name: 'Styled Components', icon: <SiStyledcomponents /> },
+    { name: 'JavaScript', icon: <DiJavascript /> },
+    { name: 'ReactJS', icon: <DiReact /> },
+    { name: 'NextJS', icon: <SiNextdotjs /> },
+    { name: 'TypeScript', icon: <SiTypescript /> },
+    { name: 'Git/GitHub', icon: <DiGitBranch /> },
+    { name: 'Jest', icon: <SiJest /> },
+    { name: 'Cypress', icon: <SiCypress /> },
+    { name: 'Testing Library', icon: <SiTestinglibrary /> },
+    { name: 'AWS', icon: <SiAmazonaws /> },
+    { name: 'Terraform', icon: <SiTerraform /> },
+    { name: 'Serverless', icon: <SiServerless /> },
   ];
 
   const interpersonalSkills = [
@@ -81,10 +81,6 @@ export const Skills = () => {
                     <div className={styled.skillIcon}>{skill.icon}</div>
                     <span className={styled.skillName}>{skill.name}</span>
                   </div>
-                  <div className={styled.progressBar}>
-                    <div className={styled.progressFill} style={{ width: `${skill.level}%` }}></div>
-                  </div>
-                  <span className={styled.skillLevel}>{skill.level}%</span>
                 </div>
               ))}
             </div>

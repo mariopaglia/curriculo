@@ -12,7 +12,7 @@ export const Contact = () => {
     {
       icon: <FaMapMarkerAlt />,
       label: 'Localização',
-      value: 'Jundiaí, São Paulo, Brasil',
+      value: 'Valinhos, São Paulo, Brasil',
       link: null,
     },
     {
@@ -30,8 +30,8 @@ export const Contact = () => {
     {
       icon: <FaLinkedin />,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/mariopagliadev',
-      link: 'https://linkedin.com/in/mariopagliadev',
+      value: 'linkedin.com/in/devmariopaglia',
+      link: 'https://www.linkedin.com/in/devmariopaglia/',
     },
     {
       icon: <FaGithub />,
@@ -65,8 +65,9 @@ export const Contact = () => {
           <div className={styled.infoSection}>
             <h3>Informações de Contato</h3>
             <p>
-              Estou sempre aberto a novas oportunidades e conexões no campo da tecnologia. Se você está em busca de um
-              profissional apaixonado, dedicado e com habilidades comprovadas, não hesite em entrar em contato.
+              Estou sempre aberto a novas oportunidades, conexões no campo da tecnologia e projetos freelance. Se você
+              está em busca de um profissional apaixonado, dedicado e com habilidades comprovadas para seu projeto, não
+              hesite em entrar em contato.
             </p>
 
             <div className={styled.contactGrid}>
@@ -90,8 +91,8 @@ export const Contact = () => {
             <div className={styled.ctaCard}>
               <h3>Vamos Trabalhar Juntos?</h3>
               <p>
-                Se você está procurando por um desenvolvedor front-end experiente que pode agregar valor ao seu projeto,
-                estou aqui para ajudar.
+                Se você está procurando por um desenvolvedor front-end experiente para seu projeto ou precisa de
+                consultoria técnica, estou aqui para ajudar. Vamos transformar suas ideias em realidade!
               </p>
               <div className={styled.ctaActions}>
                 <button
