@@ -10,8 +10,8 @@ export const About = () => {
   const highlights = [
     {
       icon: <FaCode />,
-      title: 'Desenvolvimento',
-      description: 'Especialista em React, Next.js e TypeScript com foco em código limpo e escalável.',
+      title: 'Full-stack',
+      description: 'Especialista em React, Next.js, Node.js e TypeScript. Desenvolvo soluções completas do backend ao frontend.',
     },
     {
       icon: <FaUsers />,
@@ -36,7 +36,7 @@ export const About = () => {
         <div className={styled.header}>
           <h2 className={styled.title}>Sobre Mim</h2>
           <p className={styled.subtitle}>
-            Desenvolvedor Front-end apaixonado por criar experiências digitais excepcionais
+            Desenvolvedor Full-stack apaixonado por criar soluções digitais completas e excepcionais
           </p>
         </div>
 
@@ -50,10 +50,11 @@ export const About = () => {
                 Tecnologia, a chama foi acesa - e tem crescido desde então.
               </p>
               <p>
-                Com mais de 12 anos de experiência direta como Desenvolvedor Front-end, tenho o prazer de criar
-                interfaces de usuário atraentes e intuitivas que enriquecem a experiência do usuário. Essa paixão é
-                alimentada pelo meu compromisso em permanecer na vanguarda das tendências tecnológicas, aprimorando
-                constantemente minhas habilidades e conhecimentos.
+                Com mais de 12 anos de experiência como Desenvolvedor Full-stack, atualmente trabalho na CI&T, uma das
+                maiores consultorias de tecnologia do Brasil. Tenho o prazer de criar soluções completas - do backend ao
+                frontend - que entregam valor real para o negócio. Essa paixão é alimentada pelo meu compromisso em
+                permanecer na vanguarda das tendências tecnológicas, aprimorando constantemente minhas habilidades e
+                conhecimentos.
               </p>
               <p>
                 Além da minha paixão por desenvolvimento, tenho uma afeição particular por liderar e orientar equipes
