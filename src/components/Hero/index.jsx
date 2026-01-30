@@ -45,11 +45,11 @@ export const Hero = () => {
             <h1 className={styled.title}>
               Olá, eu sou <span className={styled.highlight}>Mario Paglia</span>
             </h1>
-            <h2 className={styled.subtitle}>Desenvolvedor Front-end & Consultor</h2>
+            <h2 className={styled.subtitle}>Desenvolvedor Full-stack | CI&T</h2>
             <p className={styled.description}>
-              Com mais de 12 anos de experiência em desenvolvimento web, especializo-me em criar interfaces modernas e
-              intuitivas utilizando React, Next.js e TypeScript. Ofereço serviços de desenvolvimento e consultoria
-              técnica.
+              Com mais de 12 anos de experiência em desenvolvimento web, atualmente trabalho na CI&T criando sistemas e
+              aplicações completas. Especialista em React, Next.js, Node.js e TypeScript, transformo ideias em soluções
+              digitais profissionais que funcionam.
             </p>
 
             <div className={styled.actions}>

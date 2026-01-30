@@ -9,9 +9,32 @@ import styled from './styles.module.scss';
 export const Experience = () => {
   const experiences = [
     {
+      company: 'CI&T',
+      position: 'Desenvolvedor Full-stack Sênior',
+      period: experiencePeriod('01/08/2025', ''),
+      location: 'Campinas, São Paulo, Brasil',
+      description: [
+        'Desenvolvedor Full-stack em uma das maiores consultorias de tecnologia do Brasil, trabalhando em projetos de grande escala para clientes do setor de varejo e e-commerce.',
+        'Responsável pelo desenvolvimento de soluções completas, desde a arquitetura do backend até interfaces de usuário modernas e responsivas. Trabalho em equipe ágil, colaborando com designers, product owners e outros desenvolvedores para entregar valor de forma contínua.',
+        'Utilizo stack moderna incluindo React, Next.js, Node.js, TypeScript, PostgreSQL e AWS para criar sistemas escaláveis e de alta performance. Aplico boas práticas de desenvolvimento como Clean Code, testes automatizados e CI/CD.',
+        'Participo ativamente de code reviews, pair programming e discussões técnicas, contribuindo para a evolução da arquitetura e qualidade do código da equipe.',
+      ],
+      technologies: [
+        'React',
+        'Next.js',
+        'Node.js',
+        'TypeScript',
+        'PostgreSQL',
+        'AWS',
+        'Docker',
+        'Jest',
+        'Testing Library',
+      ],
+    },
+    {
       company: 'Consorciei',
       position: 'Desenvolvedor Front-end',
-      period: experiencePeriod('07/03/2022', ''),
+      period: experiencePeriod('07/03/2022', '01/08/2025'),
       location: 'Valinhos, São Paulo, Brasil',
       description: [
         'Como Desenvolvedor Front-end na Consorciei, meu papel vai além do desenvolvimento - é também uma questão de liderança e entrega de excelência. Dedico-me ao desenvolvimento de sistemas sofisticados que atendem às necessidades dos nossos principais parceiros, como Itaú, Santander e Porto Seguro.',

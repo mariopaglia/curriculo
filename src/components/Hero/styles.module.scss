@@ -17,6 +17,24 @@
     opacity: 0.3;
   }
 
+  // Animated gradient overlay
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      transparent 40%,
+      rgba(102, 178, 255, 0.03) 50%,
+      transparent 60%
+    );
+    animation: shimmer 8s infinite linear;
+    pointer-events: none;
+  }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -87,7 +105,7 @@
   }
 
   .btnPrimary {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, #0066e6 100%);
     color: white;
     border: none;
     padding: 0.875rem 2rem;
@@ -95,13 +113,35 @@
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px 0 rgba(0, 127, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: left 0.5s;
+    }
 
     &:hover {
-      background: var(--primary-dark);
+      background: linear-gradient(135deg, #0066e6 0%, var(--primary-dark) 100%);
       transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 6px 20px 0 rgba(0, 127, 255, 0.35);
+
+      &::before {
+        left: 100%;
+      }
     }
 
     &:active {
@@ -110,7 +150,7 @@
   }
 
   .btnSecondary {
-    background: transparent;
+    background: white;
     color: var(--primary);
     border: 2px solid var(--primary);
     padding: 0.875rem 2rem;
@@ -118,12 +158,31 @@
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px 0 rgba(0, 127, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: var(--primary);
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
+    }
 
     &:hover {
-      background: var(--primary);
       color: white;
       transform: translateY(-2px);
+      box-shadow: 0 4px 14px 0 rgba(0, 127, 255, 0.2);
+
+      &::before {
+        width: 100%;
+      }
     }
 
     &:active {
@@ -156,19 +215,34 @@
     color: var(--primary);
     font-size: 1.25rem;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
 
     &:hover {
-      background: var(--primary);
       color: white;
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 16px 0 rgba(0, 127, 255, 0.25);
+      border-color: transparent;
+
+      &::after {
+        opacity: 1;
+      }
     }
 
     &:active {
-      transform: translateY(0);
+      transform: translateY(-1px) scale(1);
     }
   }
 
@@ -225,5 +299,14 @@
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
   }
 }
