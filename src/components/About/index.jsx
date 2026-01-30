@@ -11,7 +11,8 @@ export const About = () => {
     {
       icon: <FaCode />,
       title: 'Full-stack',
-      description: 'Especialista em React, Next.js, Node.js e TypeScript. Desenvolvo soluções completas do backend ao frontend.',
+      description:
+        'Especialista em React, Next.js, Node.js e TypeScript. Desenvolvo soluções completas do backend ao frontend.',
     },
     {
       icon: <FaUsers />,
