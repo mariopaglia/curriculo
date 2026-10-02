@@ -40,76 +40,57 @@
     }
   }
 
-  .textSection {
-    .story {
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--primary);
-        margin-bottom: 1.5rem;
-      }
+  .story {
+    p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
 
-      p {
-        font-size: 1.125rem;
-        color: var(--text-secondary);
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
-  .highlights {
+  .metrics {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    list-style: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       grid-template-columns: 1fr;
     }
   }
 
-  .highlightCard {
+  .metricCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.75rem;
     background: white;
-    padding: 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
     transition: all 0.3s ease;
-    text-align: center;
 
     &:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
-      border-color: var(--primary);
     }
+  }
 
-    .iconWrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 4rem;
-      height: 4rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      color: white;
-      font-size: 1.5rem;
-    }
+  .metricValue {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--primary);
+  }
 
-    h4 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
+  .metricLabel {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
   }
 }

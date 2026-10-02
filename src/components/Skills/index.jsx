@@ -1,106 +1,131 @@
 import React from 'react';
-import { DiGitBranch, DiHtml5, DiJavascript, DiReact, DiSass } from 'react-icons/di';
-import {
-  FaCheckCircle,
-  FaCode,
-  FaGem,
-  FaHandshake,
-  FaHeart,
-  FaLightbulb,
-  FaRocket,
-  FaShieldAlt,
-  FaStar,
-  FaUsers,
-} from 'react-icons/fa';
+import { FaCheckCircle, FaCloud, FaDesktop, FaServer, FaUsers } from 'react-icons/fa';
 import {
   SiAmazonaws,
+  SiAmazondynamodb,
   SiCypress,
+  SiDatadog,
+  SiDocker,
+  SiGithubactions,
+  SiGraphql,
   SiJest,
+  SiMysql,
+  SiNestjs,
   SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiRabbitmq,
+  SiReact,
+  SiRedis,
   SiServerless,
-  SiStyledcomponents,
   SiTerraform,
   SiTestinglibrary,
   SiTypescript,
+  SiWebpack,
 } from 'react-icons/si';
 import styled from './styles.module.scss';
 
-/**
- * Skills section component
- * @returns {JSX.Element} Skills component
- */
+const SKILL_GROUPS = [
+  {
+    title: 'Back-end e arquitetura',
+    icon: <FaServer />,
+    skills: [
+      { name: 'Node.js', icon: <SiNodedotjs /> },
+      { name: 'NestJS', icon: <SiNestjs /> },
+      { name: 'TypeScript', icon: <SiTypescript /> },
+      { name: 'GraphQL', icon: <SiGraphql /> },
+      { name: 'RabbitMQ', icon: <SiRabbitmq /> },
+      { name: 'Prisma', icon: <SiPrisma /> },
+      { name: 'Microsserviços' },
+      { name: 'Arquitetura hexagonal' },
+      { name: 'Event-driven' },
+    ],
+  },
+  {
+    title: 'Dados',
+    icon: <SiPostgresql />,
+    skills: [
+      { name: 'PostgreSQL', icon: <SiPostgresql /> },
+      { name: 'MySQL', icon: <SiMysql /> },
+      { name: 'Redis', icon: <SiRedis /> },
+      { name: 'DynamoDB', icon: <SiAmazondynamodb /> },
+    ],
+  },
+  {
+    title: 'Cloud e DevOps',
+    icon: <FaCloud />,
+    skills: [
+      { name: 'AWS (ECS, Lambda, RDS)', icon: <SiAmazonaws /> },
+      { name: 'Serverless', icon: <SiServerless /> },
+      { name: 'Terraform', icon: <SiTerraform /> },
+      { name: 'Docker', icon: <SiDocker /> },
+      { name: 'GitHub Actions', icon: <SiGithubactions /> },
+      { name: 'Datadog / New Relic', icon: <SiDatadog /> },
+    ],
+  },
+  {
+    title: 'Front-end',
+    icon: <FaDesktop />,
+    skills: [
+      { name: 'React', icon: <SiReact /> },
+      { name: 'Next.js', icon: <SiNextdotjs /> },
+      { name: 'Module Federation', icon: <SiWebpack /> },
+      { name: 'SSR / SSG' },
+      { name: 'Web Vitals' },
+    ],
+  },
+  {
+    title: 'Qualidade',
+    icon: <FaCheckCircle />,
+    skills: [
+      { name: 'Jest', icon: <SiJest /> },
+      { name: 'Cypress', icon: <SiCypress /> },
+      { name: 'Testing Library', icon: <SiTestinglibrary /> },
+      { name: 'TDD' },
+      { name: 'Clean Code' },
+      { name: 'SOLID' },
+    ],
+  },
+  {
+    title: 'Liderança técnica',
+    icon: <FaUsers />,
+    skills: [
+      { name: 'Mentoria e 1:1s' },
+      { name: 'Code review' },
+      { name: 'Padrões de arquitetura' },
+      { name: 'Alinhamento com produto' },
+      { name: 'Scrum / Kanban' },
+    ],
+  },
+];
+
 export const Skills = () => {
-  const technicalSkills = [
-    { name: 'HTML', icon: <DiHtml5 /> },
-    { name: 'CSS/SASS', icon: <DiSass /> },
-    { name: 'Styled Components', icon: <SiStyledcomponents /> },
-    { name: 'JavaScript', icon: <DiJavascript /> },
-    { name: 'ReactJS', icon: <DiReact /> },
-    { name: 'NextJS', icon: <SiNextdotjs /> },
-    { name: 'TypeScript', icon: <SiTypescript /> },
-    { name: 'Git/GitHub', icon: <DiGitBranch /> },
-    { name: 'Jest', icon: <SiJest /> },
-    { name: 'Cypress', icon: <SiCypress /> },
-    { name: 'Testing Library', icon: <SiTestinglibrary /> },
-    { name: 'AWS', icon: <SiAmazonaws /> },
-    { name: 'Terraform', icon: <SiTerraform /> },
-    { name: 'Serverless', icon: <SiServerless /> },
-  ];
-
-  const interpersonalSkills = [
-    { name: 'Comunicação', icon: <FaUsers />, description: 'Comunicação clara e efetiva' },
-    { name: 'Escrita', icon: <FaHandshake />, description: 'Documentação e comunicação escrita' },
-    { name: 'Empatia', icon: <FaHeart />, description: 'Entendimento das necessidades do usuário' },
-    { name: 'Colaboração', icon: <FaUsers />, description: 'Trabalho em equipe eficiente' },
-    { name: 'Organização', icon: <FaCheckCircle />, description: 'Gestão de projetos e tempo' },
-    { name: 'Flexibilidade', icon: <FaRocket />, description: 'Adaptação a mudanças' },
-    { name: 'Resiliência', icon: <FaShieldAlt />, description: 'Superação de desafios' },
-    { name: 'Liderança', icon: <FaStar />, description: 'Condução de equipes' },
-    { name: 'Ética', icon: <FaGem />, description: 'Valores e princípios sólidos' },
-    { name: 'Proatividade', icon: <FaLightbulb />, description: 'Iniciativa e inovação' },
-  ];
-
   return (
     <section id='skills' className={styled.skills}>
       <div className={styled.container}>
         <div className={styled.header}>
           <h2 className={styled.title}>Competências</h2>
-          <p className={styled.subtitle}>Minhas habilidades técnicas e interpessoais</p>
+          <p className={styled.subtitle}>As ferramentas e práticas que uso no dia a dia</p>
         </div>
 
-        <div className={styled.content}>
-          <div className={styled.section}>
-            <h3 className={styled.sectionTitle}>
-              <FaCode className={styled.sectionIcon} />
-              Competências Técnicas
-            </h3>
-            <div className={styled.skillsGrid}>
-              {technicalSkills.map((skill, index) => (
-                <div key={index} className={styled.skillCard}>
-                  <div className={styled.skillHeader}>
-                    <div className={styled.skillIcon}>{skill.icon}</div>
-                    <span className={styled.skillName}>{skill.name}</span>
-                  </div>
-                </div>
-              ))}
+        <div className={styled.groups}>
+          {SKILL_GROUPS.map((group) => (
+            <div key={group.title} className={styled.groupCard}>
+              <h3 className={styled.groupTitle}>
+                <span className={styled.groupIcon}>{group.icon}</span>
+                {group.title}
+              </h3>
+              <ul className={styled.skillList}>
+                {group.skills.map((skill) => (
+                  <li key={skill.name} className={styled.skillTag}>
+                    {skill.icon}
+                    {skill.name}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          <div className={styled.section}>
-            <h3 className={styled.sectionTitle}>
-              <FaUsers className={styled.sectionIcon} />
-              Competências Interpessoais
-            </h3>
-            <div className={styled.interpersonalGrid}>
-              {interpersonalSkills.map((skill, index) => (
-                <div key={index} className={styled.interpersonalCard}>
-                  <div className={styled.interpersonalIcon}>{skill.icon}</div>
-                  <h4 className={styled.interpersonalName}>{skill.name}</h4>
-                  <p className={styled.interpersonalDescription}>{skill.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

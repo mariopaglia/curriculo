@@ -84,6 +84,11 @@
   .timelineContent {
     background: white;
     padding: 2rem;
+
+    @media (max-width: 480px) {
+      padding: 1.25rem;
+    }
+
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
@@ -137,17 +142,35 @@
     }
   }
 
-  .description {
+  .summary {
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
     margin-bottom: 1.5rem;
 
-    p {
-      font-size: 1rem;
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.9375rem;
       color: var(--text-secondary);
-      line-height: 1.7;
-      margin-bottom: 1rem;
+      line-height: 1.6;
 
-      &:last-child {
-        margin-bottom: 0;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.6em;
+        width: 0.375rem;
+        height: 0.375rem;
+        border-radius: 50%;
+        background: var(--primary);
       }
     }
   }
@@ -158,18 +181,13 @@
     gap: 0.5rem;
 
     .techTag {
-      background: var(--primary);
-      color: white;
+      background: rgba(0, 127, 255, 0.08);
+      color: var(--primary-dark);
       padding: 0.25rem 0.75rem;
       border-radius: var(--radius-sm);
       font-size: 0.75rem;
       font-weight: 500;
-      transition: all 0.2s ease;
 
-      &:hover {
-        background: var(--primary-dark);
-        transform: translateY(-1px);
-      }
     }
   }
 }

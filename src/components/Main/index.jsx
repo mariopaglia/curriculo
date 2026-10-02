@@ -1,11 +1,11 @@
 import React from 'react';
 import { About } from '../About';
 import { Contact } from '../Contact';
+import { Education } from '../Education';
 import { Experience } from '../Experience';
 import { Footer } from '../Footer';
 import { Hero } from '../Hero';
 import { Navigation } from '../Navigation';
-import { Services } from '../Services';
 import { Skills } from '../Skills';
 
 /**
@@ -21,7 +21,7 @@ export function Main() {
         <About />
         <Experience />
         <Skills />
-        <Services />
+        <Education />
         <Contact />
       </main>
       <Footer />

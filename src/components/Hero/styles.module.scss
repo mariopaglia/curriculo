@@ -1,5 +1,7 @@
 .hero {
   min-height: 100vh;
+  // Leaves room for the fixed navigation bar when the content is taller than the viewport.
+  padding: 6rem 0 4rem;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--background) 0%, #f8fafc 100%);
@@ -60,8 +62,29 @@
     animation: fadeInUp 0.8s ease-out;
   }
 
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.875rem;
+    margin-bottom: 1.5rem;
+    border-radius: 999px;
+    background: rgba(0, 127, 255, 0.08);
+    color: var(--primary-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    &::before {
+      content: '';
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #16a34a;
+    }
+  }
+
   .title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.25rem, 5vw, 4rem);
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1rem;
@@ -105,9 +128,15 @@
   }
 
   .btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    isolation: isolate;
     background: linear-gradient(135deg, var(--primary) 0%, #0066e6 100%);
     color: white;
     border: none;
+    text-decoration: none;
     padding: 0.875rem 2rem;
     border-radius: var(--radius-md);
     font-weight: 600;
@@ -136,6 +165,7 @@
 
     &:hover {
       background: linear-gradient(135deg, #0066e6 0%, var(--primary-dark) 100%);
+      color: white;
       transform: translateY(-2px);
       box-shadow: 0 6px 20px 0 rgba(0, 127, 255, 0.35);
 
@@ -150,6 +180,11 @@
   }
 
   .btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    isolation: isolate;
     background: white;
     color: var(--primary);
     border: 2px solid var(--primary);
@@ -195,6 +230,7 @@
     flex-direction: column;
     gap: 1rem;
     animation: slideInRight 0.8s ease-out 0.2s both;
+    list-style: none;
 
     @media (max-width: 768px) {
       flex-direction: row;
@@ -251,11 +287,16 @@
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     animation: fadeInUp 1s ease-out 0.5s both;
+
+    @media (max-height: 700px), (max-width: 768px) {
+      display: none;
+    }
 
     .scrollText {
       font-size: 0.875rem;

@@ -1,135 +1,53 @@
 import React from 'react';
+import { EXPERIENCES } from '../../data/experiences';
 import { experiencePeriod } from '../utils/helpers';
 import styled from './styles.module.scss';
 
-/**
- * Experience section component
- * @returns {JSX.Element} Experience component
- */
 export const Experience = () => {
-  const experiences = [
-    {
-      company: 'CI&T',
-      position: 'Desenvolvedor Full-stack Sênior',
-      period: experiencePeriod('01/08/2025', ''),
-      location: 'Campinas, São Paulo, Brasil',
-      description: [
-        'Desenvolvedor Full-stack em uma das maiores consultorias de tecnologia do Brasil, trabalhando em projetos de grande escala para clientes do setor de varejo e e-commerce.',
-        'Responsável pelo desenvolvimento de soluções completas, desde a arquitetura do backend até interfaces de usuário modernas e responsivas. Trabalho em equipe ágil, colaborando com designers, product owners e outros desenvolvedores para entregar valor de forma contínua.',
-        'Utilizo stack moderna incluindo React, Next.js, Node.js, TypeScript, PostgreSQL e AWS para criar sistemas escaláveis e de alta performance. Aplico boas práticas de desenvolvimento como Clean Code, testes automatizados e CI/CD.',
-        'Participo ativamente de code reviews, pair programming e discussões técnicas, contribuindo para a evolução da arquitetura e qualidade do código da equipe.',
-      ],
-      technologies: [
-        'React',
-        'Next.js',
-        'Node.js',
-        'TypeScript',
-        'PostgreSQL',
-        'AWS',
-        'Docker',
-        'Jest',
-        'Testing Library',
-      ],
-    },
-    {
-      company: 'Consorciei',
-      position: 'Desenvolvedor Front-end',
-      period: experiencePeriod('07/03/2022', '01/08/2025'),
-      location: 'Valinhos, São Paulo, Brasil',
-      description: [
-        'Como Desenvolvedor Front-end na Consorciei, meu papel vai além do desenvolvimento - é também uma questão de liderança e entrega de excelência. Dedico-me ao desenvolvimento de sistemas sofisticados que atendem às necessidades dos nossos principais parceiros, como Itaú, Santander e Porto Seguro.',
-        'Com um foco incansável na qualidade, garanto a entrega eficaz de projetos dentro do prazo, utilizando tecnologias avançadas para otimizar sistemas internos e externos de gestão de compras, vendas e transferências de cotas de consórcio.',
-        'Minha abordagem de desenvolvimento é embasada em uma variedade de ferramentas modernas como ReactJS, NextJS, Styled Components, Context API, Hooks, TypeScript, Axios, AWS Lambda, Terraform, Backend for Frontend (BFF), Jest, Cypress e Testing Library. Com elas, sou capaz de criar soluções escaláveis, altamente desempenháveis e com interfaces de usuário eficientes e intuitivas.',
-        'Com a liderança da equipe como parte integral da minha função, conduzo a equipe com um equilíbrio eficaz entre orientação, autonomia e uma visão estratégica clara.',
-      ],
-      technologies: [
-        'ReactJS',
-        'NextJS',
-        'TypeScript',
-        'Styled Components',
-        'AWS Lambda',
-        'Terraform',
-        'Jest',
-        'Cypress',
-      ],
-    },
-    {
-      company: 'Agência H1 Code',
-      position: 'Desenvolvedor Front-end',
-      period: experiencePeriod('09/01/2016', '01/03/2022'),
-      location: 'Valinhos, São Paulo, Brasil',
-      description: [
-        'No papel de Desenvolvedor Front-end na Agência H1 Code, conduzi o desenvolvimento e a manutenção de uma variedade de projetos web, que abrangiam desde sites e lojas virtuais até blogs, landing pages e dashboards.',
-        'Em minha atuação, empreguei uma ampla gama de tecnologias para garantir soluções robustas e de alta qualidade. Entre elas, HTML, CSS, SASS, JavaScript, Git, GitHub, Bootstrap, jQuery, ReactJS, NextJS, TypeScript, Redux e Styled Components.',
-        'Para otimizar a comunicação entre front-end e back-end, apliquei minha experiência com o Axios, realizando requisições HTTP e integrando eficientemente nossas soluções com APIs externas. Essas habilidades se mostraram essenciais para criar interfaces de usuário intuitivas e para assegurar a máxima funcionalidade de nossas soluções web.',
-        'Nesta posição, não só aprimorei minhas habilidades técnicas, mas também aprendi a adaptar-me rapidamente a novos desafios, sempre buscando a excelência em cada projeto que me foi confiado.',
-      ],
-      technologies: ['HTML', 'CSS', 'SASS', 'JavaScript', 'ReactJS', 'NextJS', 'TypeScript', 'Redux', 'Bootstrap'],
-    },
-    {
-      company: 'SKY Brasil',
-      position: 'Líder de Equipe',
-      period: experiencePeriod('01/01/2014', '08/01/2016'),
-      location: 'São Paulo, São Paulo, Brasil',
-      description: [
-        'Como Líder de Equipe na SKY Brasil, assumi responsabilidades de gestão e liderança, coordenando uma equipe interna de controladores. Sob minha orientação, planejamos estratégias para alcançar metas e prazos rigorosos, melhorando a eficiência e a produtividade da equipe.',
-        'Além disso, liderei o processo de recrutamento e seleção para fortalecer ainda mais nossa equipe. Representei nossa unidade em eventos, reuniões e treinamentos externos, reforçando a imagem positiva e profissional da nossa equipe e da empresa como um todo.',
-      ],
-      technologies: ['Liderança', 'Gestão de Pessoas', 'Recrutamento', 'Treinamento'],
-    },
-    {
-      company: 'SKY Brasil',
-      position: 'Controlador Técnico',
-      period: experiencePeriod('01/01/2008', '01/01/2014'),
-      location: 'São Paulo, São Paulo, Brasil',
-      description: [
-        'Como Controlador Técnico, gerenciei e supervisionei uma equipe de mais de 30 técnicos responsáveis pela instalação e assistência técnica dos produtos SKY em residências. Além disso, proporcionava um atendimento ao cliente excepcional, agendando visitas técnicas para montagem e instalação de equipamentos.',
-        'Esta experiência me proporcionou habilidades valiosas em liderança de equipe, gerenciamento de projetos, atendimento ao cliente e comunicação efetiva, competências que se provaram inestimáveis em minha carreira subsequente como desenvolvedor.',
-      ],
-      technologies: ['Supervisão', 'Atendimento ao Cliente', 'Gestão de Equipe'],
-    },
-  ];
-
   return (
     <section id='experience' className={styled.experience}>
       <div className={styled.container}>
         <div className={styled.header}>
-          <h2 className={styled.title}>Experiência Profissional</h2>
-          <p className={styled.subtitle}>Minha jornada profissional em desenvolvimento e liderança</p>
+          <h2 className={styled.title}>Experiência profissional</h2>
+          <p className={styled.subtitle}>Da liderança de times à liderança técnica de squads</p>
         </div>
 
-        <div className={styled.timeline}>
-          {experiences.map((exp, index) => (
-            <div key={index} className={styled.timelineItem}>
-              <div className={styled.timelineMarker}></div>
-              <div className={styled.timelineContent}>
-                <div className={styled.companyHeader}>
-                  <h3 className={styled.companyName}>{exp.company}</h3>
-                  <span className={styled.position}>{exp.position}</span>
-                </div>
+        <ol className={styled.timeline}>
+          {EXPERIENCES.map((experience) => (
+            <li key={`${experience.company}-${experience.startDate}`} className={styled.timelineItem}>
+              <div className={styled.timelineMarker} />
+              <article className={styled.timelineContent}>
+                <header className={styled.companyHeader}>
+                  <h3 className={styled.companyName}>{experience.company}</h3>
+                  <p className={styled.position}>{experience.position}</p>
+                </header>
 
                 <div className={styled.meta}>
-                  <span className={styled.period}>{exp.period}</span>
-                  <span className={styled.location}>{exp.location}</span>
+                  <span className={styled.period}>{experiencePeriod(experience.startDate, experience.endDate)}</span>
+                  <span className={styled.location}>{experience.location}</span>
                 </div>
 
-                <div className={styled.description}>
-                  {exp.description.map((paragraph, pIndex) => (
-                    <p key={pIndex}>{paragraph}</p>
-                  ))}
-                </div>
+                <p className={styled.summary}>{experience.summary}</p>
 
-                <div className={styled.technologies}>
-                  {exp.technologies.map((tech, tIndex) => (
-                    <span key={tIndex} className={styled.techTag}>
-                      {tech}
-                    </span>
+                {experience.highlights.length > 0 && (
+                  <ul className={styled.highlights}>
+                    {experience.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
+
+                <ul className={styled.technologies} aria-label='Tecnologias'>
+                  {experience.technologies.map((technology) => (
+                    <li key={technology} className={styled.techTag}>
+                      {technology}
+                    </li>
                   ))}
-                </div>
-              </div>
-            </div>
+                </ul>
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

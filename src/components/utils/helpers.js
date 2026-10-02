@@ -1,37 +1,58 @@
-const verifyMonths = (month) => {
-  if (month > 1) {
-    return month + ' meses';
-  } else if (month === 1) {
-    return month + ' mês';
-  } else {
-    return '';
+const MONTHS_PER_YEAR = 12;
+
+const formatMonths = (months) => {
+  if (months > 1) {
+    return `${months} meses`;
   }
+  if (months === 1) {
+    return '1 mês';
+  }
+  return '';
 };
 
-export const experiencePeriod = (date1, date2) => {
-  date1 = date1 ? new Date(date1.split('/').reverse().join('-')) : new Date();
-  let date2Text = 'Atualmente';
-
-  if (date2) {
-    date2 = new Date(date2.split('/').reverse().join('-'));
-    date2Text = `${date2.toLocaleString('pt-BR', { month: 'short' })} de ${date2.getFullYear()}`;
-  } else {
-    date2 = new Date();
+const formatYears = (years) => {
+  if (years > 1) {
+    return `${years} anos`;
   }
+  if (years === 1) {
+    return '1 ano';
+  }
+  return '';
+};
 
-  if (!date1.getTime()) {
+// Builds the date in the local timezone: `new Date('YYYY-MM-DD')` is parsed as UTC
+// and shifts to the previous day (and month) in Brazilian timezones.
+const parseBrazilianDate = (date) => {
+  const [day, month, year] = date.split('/').map(Number);
+  return new Date(year, month - 1, day);
+};
+
+const formatMonthYear = (date) => `${date.toLocaleString('pt-BR', { month: 'short' })} de ${date.getFullYear()}`;
+
+/**
+ * @param {string} startDate dd/mm/yyyy
+ * @param {string} [endDate] dd/mm/yyyy; empty means the position is current
+ * @param {Date} [today] reference date for current positions
+ */
+export const experiencePeriod = (startDate, endDate, today = new Date()) => {
+  const start = parseBrazilianDate(startDate);
+  const end = endDate ? parseBrazilianDate(endDate) : today;
+
+  if (Number.isNaN(start.getTime())) {
     return 'Data inicial inválida';
   }
-  if (date1.getTime() > date2.getTime()) {
+  if (start.getTime() > end.getTime()) {
     return 'Data final é menor que a data inicial';
   }
 
-  let years = date2.getFullYear() - date1.getFullYear();
-  let months = date2.getMonth() - date1.getMonth() + 12 * years + 1; // +1 para considerar o mês atual
-  years = Math.floor(months / 12);
-  months = Math.ceil(months - years * 12); // Use Math.ceil() para arredondar para cima
+  // Counts both the first and the last month, as LinkedIn does.
+  const totalMonths =
+    (end.getFullYear() - start.getFullYear()) * MONTHS_PER_YEAR + end.getMonth() - start.getMonth() + 1;
+  const years = Math.floor(totalMonths / MONTHS_PER_YEAR);
+  const months = totalMonths % MONTHS_PER_YEAR;
 
-  return `${date1.toLocaleString('pt-BR', { month: 'short' })} de ${date1.getFullYear()} - ${date2Text} · ${years} ano${
-    years > 1 ? 's' : ''
-  } ${verifyMonths(months)}`;
+  const endText = endDate ? formatMonthYear(end) : 'o momento';
+  const duration = [formatYears(years), formatMonths(months)].filter(Boolean).join(' ');
+
+  return `${formatMonthYear(start)} - ${endText} · ${duration}`;
 };

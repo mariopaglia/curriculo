@@ -2,55 +2,103 @@
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0f172a" />
 
-    <!-- SEO Meta Tags -->
+    <title>Mario Paglia | Engenheiro de Software Sênior · Node.js, NestJS, React</title>
     <meta
       name="description"
-      content="Mario Paglia - Desenvolvedor Full-stack há +12 anos, atualmente na CI&T. Especialista em React, Next.js, Node.js, TypeScript e desenvolvimento de sistemas escaláveis."
-    />
-    <meta
-      name="keywords"
-      content="desenvolvedor full-stack, desenvolvedor fullstack, react, next.js, node.js, typescript, javascript, mario paglia, programador, web developer, consultoria técnica, desenvolvimento web, CI&T, freelance"
+      content="Mario Paglia, Engenheiro de Software Sênior na CI&T com mais de 15 anos de experiência. Microsserviços com Node.js, NestJS e AWS, front-end com React e Next.js, mentoria e liderança técnica. Aberto a vagas de Tech Lead."
     />
     <meta name="author" content="Mario Paglia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mariopaglia.dev.br/" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon-64.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+
+    <!-- Open Graph: link previews on LinkedIn, WhatsApp and Facebook require absolute URLs -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Mario Paglia" />
     <meta property="og:url" content="https://mariopaglia.dev.br/" />
-    <meta property="og:title" content="Mario Paglia - Desenvolvedor Full-stack | CI&T" />
+    <meta property="og:title" content="Mario Paglia | Engenheiro de Software Sênior" />
     <meta
       property="og:description"
-      content="Desenvolvedor Full-stack há +12 anos, atualmente na CI&T. Especialista em React, Next.js, Node.js e TypeScript."
+      content="Engenheiro de Software Sênior na CI&T. Node.js, NestJS, TypeScript, React/Next.js e AWS. Arquitetura de microsserviços, mentoria e liderança técnica."
     />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:image" content="https://mariopaglia.dev.br/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mario Paglia, Engenheiro de Software Sênior na CI&T" />
+    <meta property="profile:first_name" content="Mario" />
+    <meta property="profile:last_name" content="Paglia" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://mariopaglia.dev.br/" />
-    <meta property="twitter:title" content="Mario Paglia - Desenvolvedor Full-stack | CI&T" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mario Paglia | Engenheiro de Software Sênior" />
     <meta
-      property="twitter:description"
-      content="Desenvolvedor Full-stack há +12 anos, atualmente na CI&T. Especialista em React, Next.js, Node.js e TypeScript."
+      name="twitter:description"
+      content="Engenheiro de Software Sênior na CI&T. Node.js, NestJS, TypeScript, React/Next.js e AWS."
     />
-    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:image" content="https://mariopaglia.dev.br/og-image.png" />
 
-    <!-- Preconnect for performance -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mario Paglia",
+        "url": "https://mariopaglia.dev.br/",
+        "image": "https://mariopaglia.dev.br/og-image.png",
+        "jobTitle": "Engenheiro de Software Sênior",
+        "worksFor": { "@type": "Organization", "name": "CI&T", "url": "https://ciandt.com" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valinhos",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "email": "mailto:contato@mariopaglia.dev.br",
+        "alumniOf": [
+          { "@type": "EducationalOrganization", "name": "Full Cycle" },
+          { "@type": "EducationalOrganization", "name": "UNINTER Centro Universitário Internacional" },
+          { "@type": "EducationalOrganization", "name": "Impacta Tecnologia" }
+        ],
+        "knowsAbout": [
+          "Node.js",
+          "NestJS",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "AWS",
+          "Arquitetura de microsserviços",
+          "GraphQL",
+          "Liderança técnica"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/devmariopaglia/",
+          "https://github.com/mariopaglia",
+          "https://linktr.ee/devmariopaglia"
+        ]
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <title>Mario Paglia - Desenvolvedor Full-stack | CI&T</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <h1>Mario Paglia</h1>
+      <p>
+        Engenheiro de Software Sênior na CI&amp;T. Node.js, NestJS, TypeScript, React/Next.js e AWS. Contato:
+        <a href="mailto:contato@mariopaglia.dev.br">contato@mariopaglia.dev.br</a> ·
+        <a href="https://www.linkedin.com/in/devmariopaglia/">LinkedIn</a>
+      </p>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

@@ -15,7 +15,7 @@ export const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -35,8 +35,8 @@ export const Navigation = () => {
     { id: 'home', label: 'Início' },
     { id: 'about', label: 'Sobre' },
     { id: 'experience', label: 'Experiência' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'services', label: 'Serviços' },
+    { id: 'skills', label: 'Competências' },
+    { id: 'education', label: 'Formação' },
     { id: 'contact', label: 'Contato' },
   ];
 
@@ -57,7 +57,12 @@ export const Navigation = () => {
           ))}
         </div>
 
-        <button className={styled.menuToggle} onClick={handleMenuToggle} aria-label='Toggle menu'>
+        <button
+          className={styled.menuToggle}
+          onClick={handleMenuToggle}
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isMenuOpen}
+        >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>

@@ -1,99 +1,66 @@
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
-import { SiLinktree } from 'react-icons/si';
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { PROFILE } from '../../data/profile';
 import styled from './styles.module.scss';
 
-/**
- * Hero section component with modern design
- * @returns {JSX.Element} Hero component
- */
+const SOCIAL_LINKS = [
+  { label: 'LinkedIn', href: PROFILE.linkedinUrl, icon: <FaLinkedin /> },
+  { label: 'GitHub', href: PROFILE.githubUrl, icon: <FaGithub /> },
+  { label: 'E-mail', href: `mailto:${PROFILE.email}`, icon: <FaEnvelope /> },
+  { label: 'WhatsApp', href: PROFILE.whatsappUrl, icon: <FaWhatsapp /> },
+];
+
 export const Hero = () => {
-  const handleContactClick = (type) => {
-    switch (type) {
-      case 'email':
-        window.open('mailto:contato@mariopaglia.dev.br', '_blank');
-        break;
-      case 'phone':
-        window.open('https://wa.me/5511948413923', '_blank');
-        break;
-      case 'linkedin':
-        window.open('https://www.linkedin.com/in/devmariopaglia/', '_blank');
-        break;
-      case 'github':
-        window.open('https://github.com/mariopaglia', '_blank');
-        break;
-      case 'linktree':
-        window.open('https://linktr.ee/devmariopaglia', '_blank');
-        break;
-      default:
-        break;
-    }
-  };
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id='home' className={styled.hero}>
       <div className={styled.container}>
         <div className={styled.content}>
           <div className={styled.textContent}>
+            <span className={styled.badge}>Aberto a vagas de Tech Lead</span>
             <h1 className={styled.title}>
-              Olá, eu sou <span className={styled.highlight}>Mario Paglia</span>
+              Olá, eu sou <span className={styled.highlight}>{PROFILE.name}</span>
             </h1>
-            <h2 className={styled.subtitle}>Desenvolvedor Full-stack | CI&T</h2>
+            <p className={styled.subtitle}>
+              {PROFILE.role} na {PROFILE.company}
+            </p>
             <p className={styled.description}>
-              Com mais de 12 anos de experiência em desenvolvimento web, atualmente trabalho na CI&T criando sistemas e
-              aplicações completas. Especialista em React, Next.js, Node.js e TypeScript, transformo ideias em soluções
-              digitais profissionais que funcionam.
+              Mais de 15 anos construindo software, hoje como referência técnica de squad. Projeto microsserviços
+              escaláveis com Node.js, NestJS e AWS, desenvolvo interfaces com React e Next.js e ajudo times a crescer
+              com mentoria, code review e padrões de arquitetura.
             </p>
 
             <div className={styled.actions}>
-              <button className={styled.btnPrimary} onClick={() => scrollToSection('contact')}>
-                Entre em Contato
-              </button>
-              <button className={styled.btnSecondary} onClick={() => scrollToSection('services')}>
-                Ver Serviços
+              <a className={styled.btnPrimary} href='#experience'>
+                Ver experiência
+              </a>
+              <button type='button' className={styled.btnSecondary} onClick={() => window.print()}>
+                Baixar currículo (PDF)
               </button>
             </div>
           </div>
 
-          <div className={styled.socialLinks}>
-            <button
-              onClick={() => handleContactClick('linkedin')}
-              className={styled.socialButton}
-              aria-label='LinkedIn'
-            >
-              <FaLinkedin />
-            </button>
-            <button onClick={() => handleContactClick('github')} className={styled.socialButton} aria-label='GitHub'>
-              <FaGithub />
-            </button>
-            <button onClick={() => handleContactClick('email')} className={styled.socialButton} aria-label='Email'>
-              <FaEnvelope />
-            </button>
-            <button onClick={() => handleContactClick('phone')} className={styled.socialButton} aria-label='Phone'>
-              <FaPhoneAlt />
-            </button>
-            <button
-              onClick={() => handleContactClick('linktree')}
-              className={styled.socialButton}
-              aria-label='Linktree'
-            >
-              <SiLinktree />
-            </button>
-          </div>
-        </div>
-
-        <div className={styled.scrollIndicator}>
-          <div className={styled.scrollText}>Role para baixo</div>
-          <div className={styled.scrollArrow}></div>
+          <ul className={styled.socialLinks}>
+            {SOCIAL_LINKS.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className={styled.socialButton}
+                  aria-label={link.label}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {link.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+
+      <a href='#about' className={styled.scrollIndicator} aria-label='Ir para a seção Sobre'>
+        <span className={styled.scrollText}>Role para baixo</span>
+        <span className={styled.scrollArrow} />
+      </a>
     </section>
   );
 };

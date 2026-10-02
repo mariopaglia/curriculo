@@ -1,79 +1,49 @@
 import React from 'react';
-import { FaCode, FaHeart, FaRocket, FaUsers } from 'react-icons/fa';
 import styled from './styles.module.scss';
 
-/**
- * About section component
- * @returns {JSX.Element} About component
- */
-export const About = () => {
-  const highlights = [
-    {
-      icon: <FaCode />,
-      title: 'Full-stack',
-      description:
-        'Especialista em React, Next.js, Node.js e TypeScript. Desenvolvo soluções completas do backend ao frontend.',
-    },
-    {
-      icon: <FaUsers />,
-      title: 'Liderança',
-      description: 'Experiência em conduzir equipes com equilíbrio entre orientação e autonomia.',
-    },
-    {
-      icon: <FaRocket />,
-      title: 'Inovação',
-      description: 'Sempre atualizado com as últimas tecnologias e tendências do mercado.',
-    },
-    {
-      icon: <FaHeart />,
-      title: 'Paixão',
-      description: 'Apaixonado por programação desde os 13 anos, sempre em busca de aprendizado.',
-    },
-  ];
+const IMPACT_METRICS = [
+  { value: '+15 anos', label: 'escrevendo código, de projetos autônomos a squads em grandes empresas' },
+  { value: '500 mil', label: 'requisições por dia em microsserviços com 99,9% de uptime' },
+  { value: '−20%', label: 'no custo de infraestrutura AWS e −60% no tempo de deploy' },
+  { value: '30+', label: 'pessoas lideradas antes da carreira técnica, hoje mentoria de devs' },
+];
 
+export const About = () => {
   return (
     <section id='about' className={styled.about}>
       <div className={styled.container}>
         <div className={styled.header}>
-          <h2 className={styled.title}>Sobre Mim</h2>
-          <p className={styled.subtitle}>
-            Desenvolvedor Full-stack apaixonado por criar soluções digitais completas e excepcionais
-          </p>
+          <h2 className={styled.title}>Sobre mim</h2>
+          <p className={styled.subtitle}>Engenharia de software com visão de arquitetura e de pessoas</p>
         </div>
 
         <div className={styled.content}>
-          <div className={styled.textSection}>
-            <div className={styled.story}>
-              <h3>Minha Jornada</h3>
-              <p>
-                Desde que descobri minha paixão por programação aos 13 anos, segui um caminho de aprendizado e
-                aperfeiçoamento contínuos. Com o primeiro contato com HTML, CSS e Javascript em 2007 na Impacta
-                Tecnologia, a chama foi acesa - e tem crescido desde então.
-              </p>
-              <p>
-                Com mais de 12 anos de experiência como Desenvolvedor Full-stack, atualmente trabalho na CI&T, uma das
-                maiores consultorias de tecnologia do Brasil. Tenho o prazer de criar soluções completas - do backend ao
-                frontend - que entregam valor real para o negócio. Essa paixão é alimentada pelo meu compromisso em
-                permanecer na vanguarda das tendências tecnológicas, aprimorando constantemente minhas habilidades e
-                conhecimentos.
-              </p>
-              <p>
-                Além da minha paixão por desenvolvimento, tenho uma afeição particular por liderar e orientar equipes
-                para alcançar seus melhores resultados. Acredito firmemente que os melhores resultados são alcançados
-                através da sinergia do trabalho em equipe e da liderança eficaz.
-              </p>
-            </div>
+          <div className={styled.story}>
+            <p>
+              Sou Engenheiro de Software Sênior na CI&T, onde atuo como referência técnica do squad: defino padrões de
+              arquitetura, conduzo code reviews, mentoro desenvolvedores e faço a ponte técnica com product managers e
+              stakeholders.
+            </p>
+            <p>
+              Meu foco é o back-end distribuído, com microsserviços em Node.js e NestJS, arquitetura hexagonal e
+              orientada a eventos, APIs REST e GraphQL e infraestrutura na AWS. Também construo interfaces com React,
+              Next.js e TypeScript, o que me permite entregar de ponta a ponta.
+            </p>
+            <p>
+              Antes da programação virar profissão, liderei times de mais de 30 pessoas na SKY Brasil. Essa base em
+              gestão é o que hoje aplico na condução técnica de squads, e é por isso que busco meu próximo passo como
+              Tech Lead.
+            </p>
           </div>
 
-          <div className={styled.highlights}>
-            {highlights.map((highlight, index) => (
-              <div key={index} className={styled.highlightCard}>
-                <div className={styled.iconWrapper}>{highlight.icon}</div>
-                <h4>{highlight.title}</h4>
-                <p>{highlight.description}</p>
-              </div>
+          <ul className={styled.metrics}>
+            {IMPACT_METRICS.map((metric) => (
+              <li key={metric.value} className={styled.metricCard}>
+                <strong className={styled.metricValue}>{metric.value}</strong>
+                <span className={styled.metricLabel}>{metric.label}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

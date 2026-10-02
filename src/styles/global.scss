@@ -190,3 +190,95 @@ li {
 .animate-slide-in-right {
   animation: slideInRight 0.6s ease-out;
 }
+
+section[id] {
+  // Keeps section titles visible below the fixed navigation bar.
+  scroll-margin-top: 4.5rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// The "Baixar currículo (PDF)" button prints the page, so this is the PDF layout.
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+
+  html {
+    font-size: 75%;
+  }
+
+  nav,
+  footer,
+  [class*='actions'],
+  [class*='socialLinks'],
+  [class*='scrollIndicator'],
+  [class*='badge'],
+  [class*='ctaCard'],
+  [class*='timelineMarker'] {
+    display: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  section[id] {
+    min-height: auto !important;
+    padding: 1.5rem 0 !important;
+    background: none !important;
+
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
+
+  #contact,
+  #contact * {
+    color: var(--text-primary) !important;
+    background: none !important;
+  }
+
+  h2,
+  h3,
+  header {
+    break-after: avoid;
+  }
+
+  // Small blocks stay whole; long experience cards are allowed to split across pages.
+  article li,
+  [class*='metricCard'],
+  [class*='groupCard'],
+  [class*='card'] {
+    break-inside: avoid;
+  }
+
+  h1 [class*='highlight'] {
+    background: none !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: var(--primary) !important;
+  }
+}
