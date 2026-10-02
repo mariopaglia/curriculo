@@ -216,69 +216,22 @@ section[id] {
   }
 }
 
-// The "Baixar currículo (PDF)" button prints the page, so this is the PDF layout.
+// The "Baixar currículo (PDF)" button prints only the PrintableResume component.
 @media print {
   @page {
-    margin: 1.5cm;
+    size: A4;
+    margin: 1.1cm 1.3cm;
   }
 
-  html {
-    font-size: 75%;
+  html,
+  body {
+    height: auto;
+    background: white;
   }
 
   nav,
-  footer,
-  [class*='actions'],
-  [class*='socialLinks'],
-  [class*='scrollIndicator'],
-  [class*='badge'],
-  [class*='ctaCard'],
-  [class*='timelineMarker'] {
+  main,
+  footer {
     display: none !important;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    box-shadow: none !important;
-  }
-
-  section[id] {
-    min-height: auto !important;
-    padding: 1.5rem 0 !important;
-    background: none !important;
-
-    &::before,
-    &::after {
-      display: none !important;
-    }
-  }
-
-  #contact,
-  #contact * {
-    color: var(--text-primary) !important;
-    background: none !important;
-  }
-
-  h2,
-  h3,
-  header {
-    break-after: avoid;
-  }
-
-  // Small blocks stay whole; long experience cards are allowed to split across pages.
-  article li,
-  [class*='metricCard'],
-  [class*='groupCard'],
-  [class*='card'] {
-    break-inside: avoid;
-  }
-
-  h1 [class*='highlight'] {
-    background: none !important;
-    -webkit-text-fill-color: currentColor !important;
-    color: var(--primary) !important;
   }
 }

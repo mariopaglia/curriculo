@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { EXPERIENCES } from '../../data/experiences';
 import { experiencePeriod } from '../utils/helpers';
 import styled from './styles.module.scss';
@@ -23,8 +24,14 @@ export const Experience = () => {
                 </header>
 
                 <div className={styled.meta}>
-                  <span className={styled.period}>{experiencePeriod(experience.startDate, experience.endDate)}</span>
-                  <span className={styled.location}>{experience.location}</span>
+                  <span>
+                    <FaCalendarAlt aria-hidden='true' />
+                    {experiencePeriod(experience.startDate, experience.endDate)}
+                  </span>
+                  <span>
+                    <FaMapMarkerAlt aria-hidden='true' />
+                    {experience.location}
+                  </span>
                 </div>
 
                 <p className={styled.summary}>{experience.summary}</p>

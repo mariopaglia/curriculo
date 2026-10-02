@@ -6,6 +6,7 @@ import { Experience } from '../Experience';
 import { Footer } from '../Footer';
 import { Hero } from '../Hero';
 import { Navigation } from '../Navigation';
+import { PrintableResume } from '../PrintableResume';
 import { Skills } from '../Skills';
 
 /**
@@ -25,6 +26,7 @@ export function Main() {
         <Contact />
       </main>
       <Footer />
+      <PrintableResume />
     </>
   );
 }

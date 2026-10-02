@@ -10,6 +10,16 @@ const SOCIAL_LINKS = [
   { label: 'WhatsApp', href: PROFILE.whatsappUrl, icon: <FaWhatsapp /> },
 ];
 
+const RESUME_FILE_TITLE = 'Mario Paglia - Currículo';
+
+// Browsers use the document title as the default PDF file name.
+const printResume = () => {
+  const pageTitle = document.title;
+  document.title = RESUME_FILE_TITLE;
+  window.print();
+  document.title = pageTitle;
+};
+
 export const Hero = () => {
   return (
     <section id='home' className={styled.hero}>
@@ -33,7 +43,7 @@ export const Hero = () => {
               <a className={styled.btnPrimary} href='#experience'>
                 Ver experiência
               </a>
-              <button type='button' className={styled.btnSecondary} onClick={() => window.print()}>
+              <button type='button' className={styled.btnSecondary} onClick={printResume}>
                 Baixar currículo (PDF)
               </button>
             </div>

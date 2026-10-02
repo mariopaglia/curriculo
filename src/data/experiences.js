@@ -15,6 +15,11 @@ export const EXPERIENCES = [
       'Desenvolvo interfaces com React, Next.js e TypeScript usando Server Components e App Router.',
       'Mantenho observabilidade com Datadog e New Relic para sustentar SLA de 99,9%.',
     ],
+    resumeHighlights: [
+      'Referência técnica do squad: padrões de arquitetura, code review, mentoria de desenvolvedores e alinhamento com produto e stakeholders.',
+      'Microsserviços em Node.js e NestJS com arquitetura hexagonal e orientada a eventos; APIs REST e GraphQL com cache em Redis.',
+      'CI/CD com GitHub Actions e Docker na AWS (ECS, Lambda, RDS) e observabilidade com Datadog e New Relic, sustentando SLA de 99,9%.',
+    ],
     technologies: [
       'Node.js',
       'NestJS',
@@ -43,6 +48,12 @@ export const EXPERIENCES = [
       'Liderei a migração do monolito para microfrontends com Module Federation, aumentando a autonomia dos squads.',
       'Reduzi o LCP em 40% com SSR/SSG, code splitting e lazy loading, chegando a Lighthouse 95+.',
       'Estabeleci pipeline de qualidade com Jest, Cypress e Testing Library: 85% de cobertura e 30% menos bugs em produção.',
+    ],
+    resumeHighlights: [
+      'Liderança técnica do squad e mentoria de 5 desenvolvedores júnior e pleno com 1:1s, code review e padrões de Clean Code, SOLID e TDD.',
+      'Microsserviços com NestJS, GraphQL e RabbitMQ suportando mais de 500 mil requisições por dia com 99,9% de uptime.',
+      'Infraestrutura AWS com Serverless, Lambda, DynamoDB e Terraform: redução de 20% no custo e de 60% no tempo de deploy.',
+      'Migração do monolito para microfrontends com Module Federation; LCP 40% menor, Lighthouse 95+, 85% de cobertura de testes e 30% menos bugs em produção.',
     ],
     technologies: [
       'Node.js',
@@ -74,6 +85,10 @@ export const EXPERIENCES = [
       'Apliquei SEO técnico e Web Vitals em mais de 20 projetos, com Lighthouse 90+.',
       'Estabeleci padrões de código (ESLint, Prettier, Husky) e GitFlow em projetos com vários squads.',
     ],
+    resumeHighlights: [
+      'APIs REST com Node.js e Express (JWT, rate limiting, validação com Zod) e bancos MySQL e PostgreSQL otimizados, com até 50% menos tempo de resposta.',
+      'Integrações com pagamentos (Stripe, PagSeguro) e ERPs; SEO técnico e Web Vitals em mais de 20 projetos, com Lighthouse 90+.',
+    ],
     technologies: ['Node.js', 'Express', 'React', 'Next.js', 'TypeScript', 'Redux', 'MySQL', 'PostgreSQL', 'GraphQL'],
   },
   {
@@ -88,6 +103,9 @@ export const EXPERIENCES = [
       'Construí sites e sistemas com PHP e JavaScript, evoluindo para Node.js e React ao longo do período.',
       'Integrei aplicações com gateways de pagamento e APIs de terceiros.',
       'Atendi clientes diretamente, traduzindo necessidades de negócio em escopo técnico.',
+    ],
+    resumeHighlights: [
+      'Projetos web de ponta a ponta para pequenas e médias empresas, do levantamento de requisitos ao deploy, com PHP, JavaScript, Node.js e React.',
     ],
     technologies: ['PHP', 'JavaScript', 'MySQL', 'Node.js', 'React'],
   },
@@ -104,6 +122,9 @@ export const EXPERIENCES = [
       'Criei programa de capacitação interna em novas tecnologias e metodologias ágeis (Scrum e Kanban).',
       'Implementei dashboards de métricas e KPIs para decisões baseadas em dados.',
     ],
+    resumeHighlights: [
+      'Gestão de time com mais de 30 pessoas; eficiência operacional 35% maior com automação de processos e padronização de workflows.',
+    ],
     technologies: ['Liderança', 'Gestão de pessoas', 'Scrum', 'Kanban'],
   },
   {
@@ -115,6 +136,7 @@ export const EXPERIENCES = [
     summary:
       'Gestão operacional de equipes de campo, supervisionando instalações técnicas e garantindo o SLA de atendimento ao cliente.',
     highlights: [],
+    resumeHighlights: [],
     technologies: ['Gestão de equipes', 'SLA', 'Atendimento ao cliente'],
   },
 ];
